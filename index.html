@@ -25,11 +25,11 @@
         <h1 class="game-title">TRIKUREN<br/>ERRESKATEA</h1>
         <p class="title-tagline">▸ Triku galduaren misterioa ◂</p>
       </div>
-		<div style="background-image: url(main_background.png); width: 350px; height: 260px; background-size: cover; background-repeat: no-repeat; margin: 0 auto;">
+	  <div class="title-img"></div>
       
   </div>
       <div class="crt-decoration">
-        <span>[ PRESS START ]</span>
+        <span>[ SAKATU HASIERA ]</span>
       </div>
 
       <button id="btn-start" class="btn-pixel btn-start">
@@ -38,9 +38,9 @@
 
       <!-- Progreso guardado -->
       <div id="saved-game-notice" class="saved-notice hidden">
-        <p>⚡ PARTIDA GUARDADA DETECTADA</p>
-        <button id="btn-continue" class="btn-pixel btn-continue">↩ CONTINUAR</button>
-        <button id="btn-new-game" class="btn-pixel btn-new">✕ NUEVA PARTIDA</button>
+        <p>⚡ GORDETAKO PARTIDA DETEKTATUA</p>
+        <button id="btn-continue" class="btn-pixel btn-continue">↩ JARRAITU</button>
+        <button id="btn-new-game" class="btn-pixel btn-new">✕ PARTIDA BERRIA</button>
       </div>
 
       <div class="intro-footer">
@@ -76,9 +76,9 @@
         <span id="page-indicator" class="page-indicator">1 / 13 ORRIALDEA</span>
       </div>
       <div class="hud-right">
-        <button id="btn-menu" class="btn-hud" title="Menú">☰</button>
-        <button id="btn-save" class="btn-hud" title="Guardar">💾</button>
-        <button id="btn-restart" class="btn-hud" title="Reiniciar">↺</button>
+        <button id="btn-menu" class="btn-hud" title="Menua">☰</button>
+        <button id="btn-save" class="btn-hud" title="Gorde">💾</button>
+        <button id="btn-restart" class="btn-hud" title="Berrabiarazi">↺</button>
       </div>
     </header>
 
@@ -91,7 +91,7 @@
         <div class="page-corner bottom-left"></div>
 
         <div class="page-header">
-          <span class="chapter-label" id="chapter-label">CAPÍTULO I</span>
+          <span class="chapter-label" id="chapter-label">I. KAPITULUA</span>
         </div>
 
         <div class="page-content text-content">
@@ -101,7 +101,7 @@
 
         <!-- Opciones de decisión -->
         <div class="choices-area" id="choices-area">
-          <p class="choices-label">── ¿QUÉ HACES? ──</p>
+          <p class="choices-label">── ZER EGINGO DUGU? ──</p>
           <div id="choices-list" class="choices-list">
             <!-- Generadas por JS -->
           </div>
@@ -127,12 +127,43 @@
           <div class="scene-image" id="scene-image">
             <!-- Imagen SVG generada o de placeholder -->
           </div>
-          <div class="image-caption" id="image-caption">[ ESCENA ACTUAL ]</div>
+          <div class="image-caption" id="image-caption">[ EGUNGO ESZENA ]</div>
         </div>
 
+        <!-- Cuadro de lore normal (sin desafío) -->
         <div class="lore-box" id="lore-box">
-          <p class="lore-title">✦ DATOS DEL MUNDO ✦</p>
+          <p class="lore-title">✦ BESTE DATU BATZUK ✦</p>
           <p class="lore-text" id="lore-text"></p>
+        </div>
+
+        <!-- Widget de desafío (se muestra en lugar del lore-box cuando la página tiene desafío) -->
+        <div class="challenge-box hidden" id="challenge-box">
+          <p class="challenge-title">⚡ ERRONKA ⚡</p>
+          <p class="challenge-question" id="challenge-question"></p>
+
+          <div class="challenge-input-row">
+            <input
+              type="text"
+              id="challenge-input"
+              class="challenge-input"
+              placeholder="Idatzi erantzuna..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button id="challenge-submit" class="btn-pixel btn-challenge-submit">▶ ERANTZUN</button>
+          </div>
+
+          <!-- Feedback: error -->
+          <div id="challenge-feedback-error" class="challenge-feedback challenge-error hidden">
+            <span class="feedback-icon">✕</span>
+            <span id="challenge-error-msg" class="feedback-msg"></span>
+          </div>
+
+          <!-- Feedback: correcto (flash antes de mostrar opciones) -->
+          <div id="challenge-feedback-ok" class="challenge-feedback challenge-ok hidden">
+            <span class="feedback-icon">✔</span>
+            <span class="feedback-msg">ONDO DAGO! JARRAITU DEZAKEZU.</span>
+          </div>
         </div>
 
         <div class="page-footer-right">
@@ -153,11 +184,11 @@
   <div id="screen-end" class="screen">
     <div class="end-content">
       <div class="end-box">
-        <p class="end-label">✦ FIN DE LA AVENTURA ✦</p>
-        <h2 class="end-title" id="end-title">HAS ALCANZADO UN FINAL</h2>
+        <p class="end-label">✦ ABENTURAREN AMAIERA ✦</p>
+        <h2 class="end-title" id="end-title">AMAIERARA IRITSI GARA</h2>
         <p class="end-text" id="end-text"></p>
         <div class="end-buttons">
-          <button id="btn-play-again" class="btn-pixel btn-start">▶ JUGAR DE NUEVO</button>
+          <button id="btn-play-again" class="btn-pixel btn-start">▶ JOLASTU BERRIRO</button>
         </div>
       </div>
     </div>

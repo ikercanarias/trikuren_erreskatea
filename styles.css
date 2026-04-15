@@ -164,6 +164,15 @@ html, body {
   animation: pulse 2s ease-in-out infinite;
 }
 
+.title-img {
+	background-image: url(main_background.png); 
+	width: 350px; 
+	height: 260px; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	margin: 0 auto;
+}
+
 .game-title {
   font-size: clamp(28px, 6vw, 52px);
   color: var(--color-green);
@@ -281,6 +290,7 @@ html, body {
   gap: 24px;
   font-size: 7px;
   color: var(--color-text-dim);
+  padding-top: 15px;
 }
 
 /* ══════════════════════════════════════════
@@ -498,7 +508,7 @@ html, body {
 
 .story-text {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
   color: var(--color-text);
   letter-spacing: 0.5px;
@@ -627,13 +637,13 @@ html, body {
 .image-scanlines {
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
+  /*background: repeating-linear-gradient(
     to bottom,
     transparent 0,
     transparent 3px,
     rgba(0,0,0,0.25) 3px,
     rgba(0,0,0,0.25) 4px
-  );
+  );*/
   z-index: 3;
   pointer-events: none;
 }
@@ -695,7 +705,7 @@ html, body {
 
 .lore-text {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 15px;
   color: var(--color-text-dim);
   line-height: 1.7;
 }
@@ -891,3 +901,160 @@ html, body {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+
+/* ══════════════════════════════════════════
+   WIDGET DE DESAFÍO
+   ══════════════════════════════════════════ */
+
+/* Contenedor principal — mismo tamaño y posición que .lore-box */
+.challenge-box {
+  flex: 1;
+  border: 1px solid var(--color-amber-dim);
+  padding: 12px 14px;
+  background: rgba(20,12,0,0.5);
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 12px rgba(255,184,0,0.08);
+}
+
+/* Título del desafío */
+.challenge-title {
+  font-size: 7px;
+  color: var(--color-amber);
+  letter-spacing: 3px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Texto de la pregunta */
+.challenge-question {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+/* Fila de input + botón */
+.challenge-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+/* Input de respuesta */
+.challenge-input {
+  flex: 1;
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  background: #040d07;
+  border: 2px solid var(--color-green-dim);
+  color: var(--color-green);
+  padding: 8px 10px;
+  outline: none;
+  letter-spacing: 1px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  /* Quitar redondeos nativos del browser */
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.challenge-input:focus {
+  border-color: var(--color-green);
+  box-shadow: 0 0 8px rgba(0,255,136,0.25);
+}
+
+.challenge-input::placeholder {
+  color: var(--color-text-dim);
+  opacity: 1;
+}
+
+/* Estado de error: borde rojo parpadeante */
+.challenge-input.input-error {
+  border-color: var(--color-red);
+  box-shadow: 0 0 8px rgba(255,68,68,0.4);
+  animation: inputShake 0.35s ease;
+}
+
+@keyframes inputShake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-6px); }
+  40%  { transform: translateX(6px); }
+  60%  { transform: translateX(-4px); }
+  80%  { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Botón de enviar respuesta */
+.btn-challenge-submit {
+  font-size: 8px;
+  background: var(--color-amber-dim);
+  color: var(--color-bg);
+  padding: 8px 12px;
+  box-shadow: 3px 3px 0 #5a4000;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-challenge-submit:hover {
+  background: var(--color-amber);
+  box-shadow: 4px 4px 0 #5a4000, 0 0 10px rgba(255,184,0,0.3);
+  transform: translateY(-1px);
+}
+
+.btn-challenge-submit:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 0 #5a4000;
+}
+
+/* Bloque de feedback (error / ok) */
+.challenge-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  animation: feedbackIn 0.2s ease;
+}
+
+@keyframes feedbackIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.challenge-error {
+  border: 1px solid var(--color-red);
+  background: rgba(255,68,68,0.07);
+  color: var(--color-red);
+}
+
+.challenge-ok {
+  border: 1px solid var(--color-green);
+  background: rgba(0,255,136,0.07);
+  color: var(--color-green);
+  box-shadow: 0 0 10px rgba(0,255,136,0.15);
+}
+
+.feedback-icon {
+  font-size: 14px;
+  font-family: var(--font-pixel);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.feedback-msg {
+  flex: 1;
+}
+
+/* Contador de intentos fallidos */
+.challenge-attempts {
+  font-size: 7px;
+  color: var(--color-text-dim);
+  letter-spacing: 1px;
+  text-align: right;
+}
+
