@@ -831,20 +831,34 @@ document.addEventListener('keydown', (e) => {
 /* ══════════════════════════════════════════
    15. INICIALIZACIÓN
    ══════════════════════════════════════════ */
+let bgMusic = null;
+
+// Función para inicializar la música
+function initMusic() {
+  if (bgMusic) return; // Ya inicializada
+  
+  bgMusic = document.getElementById('background-music');
+  if (!bgMusic) {
+    // Crear el elemento si no existe
+    bgMusic = document.createElement('audio');
+    bgMusic.id = 'background-music';
+    bgMusic.loop = true;
+    bgMusic.volume = 0.3;
+    bgMusic.src = 'music/background.mp3';
+    document.body.appendChild(bgMusic);
+  }
+  
+  bgMusic.volume = 0.3;
+  bgMusic.play().catch(err => console.log('No se pudo reproducir:', err));
+}
+
+// Activar música con el primer clic del usuario
+document.addEventListener('click', initMusic, { once: true });
+
 
 (function init() {
   // Iniciar starfield
   iniciarStarfield();
-
-  // ── MÚSICA DE FONDO ──
-  const bgMusic = document.getElementById('background-music');
-  bgMusic.volume = 0.3; // Volumen al 30% (ajusta según prefieras)
-  
-  // Intentar reproducir la música
-  bgMusic.play().catch(err => {
-    console.log('Autoplay bloqueado por el navegador:', err);
-    // El usuario deberá hacer clic para activar
-  });
   
   // Comprobar si hay partida guardada
   const haySave = Estado.cargar();
