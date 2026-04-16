@@ -836,6 +836,16 @@ document.addEventListener('keydown', (e) => {
   // Iniciar starfield
   iniciarStarfield();
 
+  // ── MÚSICA DE FONDO ──
+  const bgMusic = document.getElementById('background-music');
+  bgMusic.volume = 0.3; // Volumen al 30% (ajusta según prefieras)
+  
+  // Intentar reproducir la música
+  bgMusic.play().catch(err => {
+    console.log('Autoplay bloqueado por el navegador:', err);
+    // El usuario deberá hacer clic para activar
+  });
+  
   // Comprobar si hay partida guardada
   const haySave = Estado.cargar();
   if (haySave && Estado.paginaActual > 1) {
