@@ -28,7 +28,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 1,
-    capitulo: 'I. KAPITULUA',
+    capitulo: 'I. KAPITULUA - TRIKU DESAGERTU DA',
     titulo: 'TRIKU DESAGERTU DA',
     texto: `Goiz lasaia zen Alonsotegiko eskolan. Haurrak beren geletan zeuden irratia entzuten, eta bat-batean oihu batzuk entzun zituzten patiotik zetozela:\n\n— TRIKU DESAGERTU DA!!\n\nDenak isilik geratu ziren. Xabi Trikuren bila joan zen eskola osoan zehar, baina ez zuen aurkitu. Triku, gure eskolako maskota, ez zegoen bere ohiko txokoan.\n\nZuzendaritzatik, Irantzuk Bartolini deitu zion, Alonsotegiko detektibeari. Minutu batzuk barru, bere txapela eta bere irribarre bihurria jantzita agertu zen. Arrastoak jaso eta susmagarriak izan zitezkeenak galdekatu ondoren, oso seguru esan zuen:\n\n— Lasai, ni arduratuko naiz!\n\nBartolinek ohar bat aurkitu zuen gimnasioko zoruan, honela zioena:\n\n"Triku berriz ikusi nahi baduzue, jarraitu pistei. — E. Sinatua"\n\nBartolinek hasperen egin zuen eta bere buruari galdetu zion ea nortzuk izan zitezkeen "E" eta zergatik bahitu zuen Triku, eta orduan esan zuen:\n\n— Abentura ona izango da hau...\n\n`,
     lore: `Eskolako ohiko isiltasuna hautsi egin zen irratiak musika emititzeari utzi eta albisterik txarrenari bide eman zionean. Trikuko txokoan hutsunea baino ez da geratzen, Alonsotegi osoa kolokan jarri duen misterioaren hasiera markatzen duena. Orain, gure maskotaren patua Bartolinen maltzurkeriaren eta 'E' misteriotsuak herrian utzi dituen pisten araberakoa da.`,
@@ -45,7 +45,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 2,
-    capitulo: 'II. KAPITULUA',
+    capitulo: 'II. KAPITULUA - LARRAMENDI FUTBOL ZELAIA',
     titulo: 'LARRAMENDI FUTBOL ZELAIA',
     texto: `Bartolin Basteitara iritsi zenean, zelaia isilik zegoen. Landako tabernan galdetu zuen ea norbaitek zerbait arraroa ikusi zuen, baina inork ez zuen ezer ikusi. Harmailetan begiratu zuen eta ez zuen ezer aurkitu. Aldagelak arakatu zituen eta ez zuen arrastorik aurkitu. Baina bat-batean, zerbaitek atentzioa eman zion berdegunean. Bartolinen ama zelai erdian zegoen baloi baten ondoan.\n\nBartolin! Bartolin! – oihukatu zuen amak. Eskerrak iritsi zaren. Basteitan paseatzen ari nintzen eta futbol zelaiaren erdian baloi bat zegoela ikusi dut. Eta harrapatzera hurbildu naizenean, ohar bat zegoen baloiaren azpian.`,
     lore: `...`,
@@ -58,7 +58,7 @@ const PAGINAS = [
     opciones: [
       { texto: 'Zubi berrira joan', destino: 5 },
       { texto: 'Frontoira joan', destino: 6 },
-      { texto: 'Eskolara itzuli', destino: 7 },
+      { texto: 'Eskolara itzuli', destino: 1 },
     ],
   },
 
@@ -67,7 +67,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 3,
-    capitulo: 'III. KAPITULUA',
+    capitulo: 'III. KAPITULUA - UDALETXEA',
     titulo: 'UDALETXEA',
     texto: `Egun hartan Udaletxeko plaza bare zegoen. Bartolin arrastoen bila hasi zen. Arake tabernan galdetu zuen, baina Danik esan zion ez zuela ezer arrarorik ikusi. Gero, Posta Bulegoko langileak galdekatu zituen, baina ez zekiten ezer.\n\nUdaletxe atzetik zetorren soinu gogor bat entzun zuen. Plaza garbitzera zetorren eskobatzeko makina zen. Andonik ekortzeko makina gidatzen zuen. Bartolinek galdetu zion ea haur talde bat ikusi zuen handik korrika, baina ez zuen ezer ikusi.\n\nAzkenean, jarlekuak eta jardinerak aztertu ondoren, harrizko iturri txikira hurbildu eta kutxa itxi bat ikusi zuen.`,
     lore: `...`,
@@ -78,9 +78,9 @@ const PAGINAS = [
     },	
 	escena: 'ayuntamiento',
     opciones: [
-      { texto: 'Daniren dendara joan', destino: 8 },
-      { texto: 'Joan Eroskira', destino: 9 },
-      { texto: 'Joan Gaztegunera', destino: 2 },
+      { texto: 'Daniren dendara joan', destino: 7 },
+      { texto: 'Joan Eroskira', destino: 8 },
+      { texto: 'Joan Gaztegunera', destino: 9 },
     ],
   },
 
@@ -89,7 +89,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 4,
-    capitulo: 'IV. KAPITULUA',
+    capitulo: 'IV. KAPITULUA - LIBURUTEGIA',
     titulo: 'LIBURUTEGIA',
     texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Xandals batzuk zeramatzaten, "E" letradun ezkutu batekin.`,
     lore: `...`,
@@ -100,9 +100,9 @@ const PAGINAS = [
     },
 	escena: 'biblioteca',
     opciones: [
-      { texto: 'Tomar el biblioteca contigo', destino: 2 },
-      { texto: 'Huir hacia el pasillo de la oscuridad', destino: 3 },
-      { texto: 'Esperar y no moverte', destino: 10 },
+      { texto: 'Pasabidera sartzea', destino: 10 },
+      { texto: 'Bunkerrera joan', destino: 11 },
+      { texto: 'Udaletxeko plazara irtetea', destino: 3 },
     ],
   },
 
@@ -111,7 +111,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 5,
-    capitulo: 'V. KAPITULUA',
+    capitulo: 'V. KAPITULUA - ZUBI BERRIA',
     titulo: 'ZUBI BERRIA',
     texto: `Ibaiko ura indar handiz jaisten zen. Euri asko egin zuen, eta urak harkaitzen kontra jotzen zuen eta enborrak eta adarrak herrestan eramaten zituen. Pasealekuan ez zegoen inor.\n\nBartolin Loibeko parkera jaitsi zen. Zabu, txirrista eta jarleku guztiak arakatu zituen, baina ez zuen arrastorik aurkitu. Mutil bat zebilen txakurra paseatzen, eta galdetu zion ea zerbait arraroa ikusi zuen, baina mutilak ezetz esan zion.\n\nBat-batean, Bartolinek zubira begiratu zuen eta txandalez jantzitako haur talde bat ikusi zuen, denak kolore berekoak. Zubia azkar zeharkatu eta Koskojalesera zihoazen korrika. Bartolin haiengana korrika zihoala, zerbaitek atentzioa eman zion\n\n`,
     lore: `...`,
@@ -122,9 +122,9 @@ const PAGINAS = [
     },
 	escena: 'puente_nuevo',
     opciones: [
-      { texto: 'Urrearen Iturrirantz jarraitu', destino: 8 },
-      { texto: 'Futbol zelaira itzuli', destino: 11 },
-      { texto: 'Joan Gaztegunera', destino: 6 },
+      { texto: 'Urrearen Iturrirantz jarraitu', destino: 12 },
+      { texto: 'Futbol zelaira itzuli', destino: 2 },
+      { texto: 'Joan Gaztegunera', destino: 9 },
     ],
   },
 
@@ -133,15 +133,15 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 6,
-    capitulo: 'VI. KAPITULUA',
+    capitulo: 'VI. KAPITULUA - FRONTOIA',
     titulo: 'FRONTOIA',
     texto: `Frontoian zarata handia entzuten zen eta jendea oihuka eta animoka. Larrobeltzeko saskibaloi taldea Escolapiosen aurkako partida jokatzen ari zen. Partida zirraragarria zen. Larrobeltz 2 puntu galtzen ari zen eta 5 segundo bakarrik geratzen ziren. Azken segundoan Larrobeltzeko jokalari batek jaurtiketa urrun bat jaurti eta hirukoa sartu zuen. Azkenean, Larrobeltzek 61-60 irabazi zuen. Zaleak oso pozik zeuden, denak oihuka eta txaloka.\n\nBaina bat-batean mundu guztia gelditu egin zen Bartolin frontoira sartzen ikusi zuenean. Une horretan, Larrobeltzeko entrenatzailea Bartolinengana hurbildu zen eta saskietako batean itsatsita aurkitu zuen ohar bat eman zion.\n\n"`,
     lore: `"Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu."`,
     escena: 'fronton',
     opciones: [
-      { texto: 'Pilotalekuko ate sekretu batetik jaistea', destino: 8 },
-      { texto: 'Daniren dendara joan', destino: 12 },
-      { texto: 'Zubi zaharrera joan', destino: 7 },
+      { texto: 'Pilotalekuko ate sekretu batetik jaistea', destino: 6 },
+      { texto: 'Daniren dendara joan', destino: 7 },
+      { texto: 'Bunkerrara joan', destino: 11 },
     ],
   },
 
@@ -150,7 +150,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 7,
-    capitulo: 'VII. KAPITULUA',
+    capitulo: 'VII. KAPITULUA - DANIREN DENDA',
     titulo: 'DANIREN DENDA',
     texto: `Bartolin Daniren dendan sartu zenean, gominolak eta gozokiak usaintzen zituen denak. Dani, salmahaiaren atzean, Takis pakete batzuk ordenatzen ari zen, kezka-aurpegiz.\n\n— Aupa, Bartolin! — oihu egin zuen Danik —. Eskerrak agertzen zaren. Duela gutxi gazte batzuk sartu dira txandala jantzita, eta barre egiten zuten etengabe. Txikle bat ere ez dute erosi, baina kristalezko poto hau koloretako gozokiz beteta utzi didate eta eskolako ikasleentzat "opari" bat zela esan dute.\n\nBartolinek potoa aztertu zuen. Ezin zen ireki, zenbakizko giltzarrapo bat zuelako. Gozokiak geruza oso zehatzetan jarrita zeudela ikusi zuen. Ohar bat zegoen kristalezko potoari itsatsita."`,
     lore: `...`,
@@ -161,9 +161,9 @@ const PAGINAS = [
     },
 	escena: 'tienda_dani',
     opciones: [
-      { texto: 'Joan Gaztegunera', destino: 8 },
-      { texto: 'Joan Eroskira', destino: 5 },
-      { texto: 'Zubi berrira joan', destino: 11 },
+      { texto: 'Joan Gaztegunera', destino: 9 },
+      { texto: 'Joan Eroskira', destino: 8 },
+      { texto: 'Zubi berrira joan', destino: 5 },
     ],
   },
 
@@ -172,7 +172,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 8,
-    capitulo: 'VIII. KAPITULUA',
+    capitulo: 'VIII. KAPITULUA - EROSKI',
     titulo: 'EROSKI',
     texto: `Eroskin sartu zenean, aire girotuak Bartolin freskatu zuen. Supermerkatuan gauza asko zeuden: kafea, galletak, jogurtak, frutak, barazkiak, etab. Denak oso itxura ona zuen. Bartolinek supermerkatua zeharkatu zuen harategira iritsi arte. Han zegoen Charles harategian hanburgesak prestatzen.\n\n— Bartolin, pozten naiz zu ikusteaz! — esan zuen bazter batean zegoen erosketa-gurdi bat seinalatuz —. Jertsean "E" bateko ezkutua duten haur batzuek kutxa hutsez betetako orga utzi dute, baina esan didate Alonsotegiko detektibe azkarrenak bakarrik jakingo lukeela falta den "produktua" aurkitzen.\n\nBartolin gurdira hurbildu zen. Esne kaxen eta galleta paketeen artean, kartazal bat aurkitu zuen, barra-kode bitxi baten marrazkia zuena.`,
     lore: `...`,
@@ -183,9 +183,9 @@ const PAGINAS = [
     },
     escena: 'eroski',
     opciones: [
-      { texto: 'Liburutegira joan', destino: 13 },
-      { texto: 'Joan gaztegunera', destino: 12 },
-      { texto: 'Joan Urrezko Iturrira', destino: 11 },
+      { texto: 'Liburutegira joan', destino: 4 },
+      { texto: 'Joan gaztegunera', destino: 9 },
+      { texto: 'Joan Urrezko Iturrira', destino: 12 },
     ],
   },
 
@@ -194,7 +194,7 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 9,
-    capitulo: 'IX. KAPITULUA',
+    capitulo: 'IX. KAPITULUA - GAZTEGUNE',
     titulo: 'GAZTEGUNE',
     texto: `Gaztegunean gazte batzuk ping-pongean jokatzen ari ziren, beste batzuk Play jokoan ari ziren eta beste batzuk Larrobeltz eta Larramendiren kromoak aldatzen ari ziren. Giroa alaia zen, baina zerbait ez zetorren bat. Neska-mutil batzuk Gazteguneko gune batean pilatu ziren.\n\nBartolin hurbildu zenean, kaxa handi itxi bat ikusi zuen. Julene oso kezkatuta zegoen, ez zekielako zergatik utzi zuten kutxa hori hor. Julenek Bartolin ikusi zuenean, esan zion:\n\n— Bartolin, begira honi! Kanpoko neska-mutil batzuek kutxa hau utzi eta korrika alde egin dute. Ez nituen ezagutzen, baina denak kirol-arropaz jantzita zeuden. Gainera, dena lokatzezko oinatzez beteta utzi dute, Urrearen iturritik zetozela esaten zuten.`,
     lore: `...`,
@@ -205,67 +205,73 @@ const PAGINAS = [
     },
 	escena: 'gaztegune',
 	opciones: [
-      { texto: 'Bunkerrera joan.', destino: 8 },
-      { texto: 'Urrearen iturrira joan', destino: 10 },
-      { texto: 'Kobazulo sekretura joan', destino: 2 },
+      { texto: 'Bunkerrera joan.', destino: 11 },
+      { texto: 'Urrearen iturrira joan', destino: 12 },
+      { texto: 'Kobazulo sekretura joan', destino: 13 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 10 — Bunker
+  // PÁGINA 10 — Pasadizo secreto
   // ──────────────────────────────────────
   {
     id: 10,
-    capitulo: 'X. KAPITULUA',
+    capitulo: 'X. KAPITULUA - PASABIDE SECRETUA',
+    titulo: 'PASABIDE SECRETUA',
+    texto: `Hezetasunak Bartolinen aurpegia jo zuen eskailera estuan behera zihoala. Pasabideko hormak harri zaharrez eginak zeuden, eta entzuten zen soinu bakarra uraren urruneko jarioa zen, lurretik iragazten zena. Bere mugikorreko linterna piztu eta argia dantzan hasi zen itzalen gainean, zoru hareatsuan arrasto freskoak erakutsiz. Bat-batean, haur-ahots batzuk entzun ziren tunelaren atzealdean, hormen oihartzunak anplifikaturik:\n— Azkar, ez gaitzatela harrapatu! — xuxurlatzen zuen norbaitek —. Bartolinek kobazulora iritsi aurretik aurkitzen bagaitu, planak porrot egingo du!\nBartolin paretari itsatsi eta hanka puntetan aurreratu zen. Izkina batetik begira, haur batzuk barrez entzun zituen. Mutikoak ziren! Bizkarrean argi eta garbi irakur zitekeen: "Eskolapioak".\n"E" koak Escolapios ikastetxeko ikasleak ziren! Urduri ziruditen eta manta baten barruan mugitzen zen zerbait zeramaten. Hala ere, Bartolinen aurre-aurrean, pasabidea bi norabidetan banatzen zen: eguneko argirantz igotzen zen arrapala bat eta tunel ilun bat, ahotsen arrastoari jarraituz Alonsotegirantz hondoratzen zena."`,
+    lore: `Lurraren erraietan, Bartolinek 'E' -aren arrastoa jarraitzen du eta bere sekretua arretaz gordetzen duen gazte talde batekin topo egiten du.`,
+    escena: 'pasadizo',
+    opciones: [
+      { texto: 'Ahotsei jarraitu.', destino: 13 },
+      { texto: 'Irteerara igo.', destino: 5 },
+      { texto: 'Liburutegira itzuli.', destino: 4 },
+    ],
+  },
+
+  // ──────────────────────────────────────
+  // PÁGINA 11 — BUNKER
+  // ──────────────────────────────────────
+  {
+    id: 11,
+    capitulo: 'X. KAPITULUA - BUNKER',
     titulo: 'BUNKER',
     texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, bere urratsen oihartzunak durundi egiten zuen beldurraren aurrean ezkutu gisa erabili ziren hormigoizko galerietan. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Leize Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain". Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
     lore: `Alonsotegiko erraietan zulatutako hormigoizko babesleku honek, gerra garaian herria babesteko, historiaz beteriko isiltasuna gordetzen du gaur egun. Garai batean bonbardaketetatik babesteko lekua izan zena, mendiaren iluntasunerantz ezinbestean daraman arrasto baten azken lekuko bihurtzen da orain.`,
     escena: 'bunker',
     opciones: [
-      { texto: 'Kobazulo sekretura joan', destino: 8 },
-      { texto: 'Joan Gaztegunera', destino: 5 },
-      { texto: 'Udaletxeko plazara joan', destino: 11 },
+      { texto: 'Kobazulo sekretura joan', destino: 13 },
+      { texto: 'Joan Gaztegunera', destino: 9 },
+      { texto: 'Udaletxeko plazara joan', destino: 3 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 11 — FINAL: La Huida (final neutro)
-  // ──────────────────────────────────────
-  {
-    id: 11,
-    capitulo: 'XI. KAPITULUA',
-    titulo: 'EL FINAL DE LA PRUDENCIA',
-    texto: `Algo en ti dice que no. Que este lugar, este libro, este poder, no son para ti ni para nadie. Que hay cosas que deben permanecer enterradas.\n\nCaminas de espaldas. La Oráculo Ciega no te detiene. El ayuntamiento no te llama. Las velas parpadean una última vez y se apagan todas a la vez.\n\nEn la oscuridad total, encuentras la puerta de hierro. Los tres cerrojos se abren desde dentro, como si Eldrath mismo decidiera dejarte ir.\n\nSales a la superficie al amanecer. El sol te quema los ojos. El aire real, el aire del mundo, sabe a algo que no habías apreciado hasta ahora.\n\nNunca contarás lo que viste. Pero tampoco lo olvidarás jamás.`,
-    lore: `RESULTADO: Salida Voluntaria\nCONSECUENCIAS: Ninguna visible\n\nEl gremio de magos registra que aproximadamente el 12% de los exploradores que llegan a Eldrath deciden salir sin tocar el eroski. Viven vidas largas y tranquilas. Curiosamente, todos mueren sonriendo.`,
-    escena: 'salida',
-    esFinal: true,
-    opciones: [],
-  },
-
-  // ──────────────────────────────────────
-  // PÁGINA 12 — FINAL: La Destrucción (final heroico)
+  // PÁGINA 12 — Fuente del Oro
   // ──────────────────────────────────────
   {
     id: 12,
-    capitulo: 'XII. KAPITULUA',
-    titulo: 'EL FINAL DEL SACRIFICIO',
-    texto: `Arrancas el eroski del aire. Vibra en tus manos como un ser vivo aterrorizado.\n\nLo arrojas contra el suelo de la sala esférica. Nada. Lo golpeas contra la pared. Nada. Entonces recuerdas: en el biblioteca del suelo leíste que el eroski solo puede ser destruido por algo que el propio portador ame.\n\nEntiendes lo que debes hacer.\n\nUsas el recuerdo más querido que tienes —un momento de tu vida que nunca quisiste perder— y lo concentras en tus manos. El calor que emerge no es mágico: es simplemente humano.\n\nEl eroski Oscuro, por primera vez en 900 años, arde.\n\nLa sala esférica colapsa a tu alrededor. Pero tú ya estás afuera, corriendo, con las manos vacías y el corazón lleno de algo que no tiene nombre.`,
+    capitulo: 'XII. KAPITULUA - FUENTE DEL ORO',
+    titulo: 'FUENTE DEL ORO',
+    texto: `Bartolin nekatu samar zegoen Urrearen Iturrirainoko bidea egin ondoren. Eskolatik igotzen den aldapa oso gogorra da. Baina Urrearen Iturrira iritsi zenean, ur kristalinoaren soinuak eta barbakoen usainak energia itzuli zioten. Eskolako haurrei asko gustatzen zitzaien hara joatea. Hala ere, gaur egun dena hutsik zegoen.\nIturritik gertu gominolak, takiak eta beste gozoki batzuk zeuden. Bartolin iturrira hurbildu zen eta arrasto batzuk ikusi zituen basoan barrena, mendiko gunerik ezkutuenerantz. Ez zegoen zalantzarik: Eskolapiokoak hemendik pasatu ziren freskatzeko, behin betiko gordelekura joan aurretik. Detektibeak txapela jantzi, mendiko aire garbia arnastu eta abenturaren azken tarterako prestatu zen.`,
     lore: `RESULTADO: Destrucción del Artefacto\nCONSECUENCIAS: El Mundo Reescrito\n\nLos registros del Archivo de Valdris quedaron en blanco esa noche. Al día siguiente, en el mundo exterior, nadie recordaba por qué había guerras. Muchos lo llamaron milagro. Solo tú sabes el precio.`,
-    escena: 'destruccion',
-    esFinal: true,
-    opciones: [],
+    escena: 'fuente_oro',
+    opciones: [
+      { texto: 'Kobazulo sekretura joan', destino: 13 },
+      { texto: 'Zubi berrira joan', destino: 5 },
+      { texto: 'Joan Eroskira', destino: 8 },
+    ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 13 — FINAL: El Poder (final oscuro)
+  // PÁGINA 13 — FINAL: La cueva secreta (final)
   // ──────────────────────────────────────
   {
     id: 13,
-    capitulo: 'XIII. KAPITULUA',
-    titulo: 'EL FINAL DEL eroski',
-    texto: `Lees.\n\nNo puedes parar. Cada página devora a la siguiente. El idioma que no deberías entender lo entiendes todo: la sintaxis de la gravedad, la conjugación de la luz, la puntuación del tiempo.\n\nCuando terminas la última página, alzas la vista.\n\nLa sala esférica ha desaparecido. Las catacumbas han desaparecido. La Oráculo Ciega, el ayuntamiento, el eco, todo ha desaparecido. Solo queda el mundo, extendido ante ti como una página en blanco.\n\nEl eroski Oscuro ya no es un libro. Es tu memoria.\n\nPuedes reescribirlo todo.\n\nY eso, comprendes por fin, era exactamente lo que el eroski necesitaba que hicieras.`,
-    lore: `RESULTADO: Fusión con el Artefacto\nCONSECUENCIAS: Indefinidas\n\nEl Archivo de Valdris registra una única nota sobre este desenlace, escrita en un idioma que nadie ha podido descifrar. La última línea, sin embargo, está en texto común: "Y el mundo nunca supo que era ficción."`,
-    escena: 'poder',
+    capitulo: 'XIII. KAPITULUA - EZKUTUKO KOBAZULOA',
+    titulo: 'EZKUTUKO KOBAZULOA',
+    texto: `Bartolin oin-puntetan joan zen kobazuloaren sarreratik, bere txapelari eutsiz, nerbioekin eror ez zedin. Bat-batean, aho zabalik geratu zen. Ez zegoen munstrorik, ez bilauik, ez tranpa ilunik. Eskolapioetako haurrak gezurrezko su txiki baten inguruan eserita zeuden (linternekin eta paper zelofanarekin egina), eta erdian Triku zegoen!\nGure maskota ez zen sufritzen ari. Aitzitik, eroso zegoen kuxin baten gainean etzanda, Eskolapiokoek sagar zatitxoak jaten eman eta ipuin bat irakurtzen zioten bitartean. Bartolin ikustean, haurrek jauzi egin zuten eta tomateak bezain gorri jarri ziren.\n— Harrapakinak! — oihu egin zuen Bartolinek, besoak gurutzatuz irribarre pikaroz —. Jakin al daiteke zer egiten duen Alonsotegiko trikurik ospetsuenak kobazulo honetan?\nEskolapioetako haur batek aitortu zuen: — Izan ere... zuen maskota Bizkaia osoko ederrena da! Gure eskolan lehortzen ari den landare bakarra daukagu... Bahiketa sentitzen dugu, asteburuko mailegu bat besterik ez zen!\nBartolinek algara egin zuen, eta burrunba egin zuen kobazulo osoan. — A zer sustoa eman diguzuen! Triku ez da entrenatzen, Triku partekatu egiten da. Baina hurrengoan, ohar misteriotsu baten ordez, bidali WhatsApp bat eta frontoira jolastera gonbidatuko zaituztegu!\nTrikuk, dena ulertuko balu bezala, aharrausi txiki bat egin zuen, eta Eskolapioen umeengana hurbildu zen azken besarkada bat ematera (kontu handiz, noski). Alonsotegiko haurrak, Bartolinen atzetik zetozenak, bat-batean agertu ziren eta, haserretu beharrean, baloi batzuk atera zituzten.\n— Aizue! — esan zuten —. Maskota bat nahi baduzue, gurea bezalako maskota bat egiten lagunduko dizuegu!\nEta horrela, bahiketa misteriotsu bat bezala hasi zena barre-festa batekin eta lagun berriekin amaitu zen. Triku eskolako bere txokora itzuli zen, baina oraingoan bufanda berri batekin "E" hizkiarekin eta lagun berri askorekin. Alonsotegin badakigu, azkenean, pistarik onenak beti leku berera eramaten duela: adiskidetasuna!`,
+    lore: `ZORIONAK!"`,
+    escena: 'cueva_secreta',
     esFinal: true,
     opciones: [],
   },
@@ -299,13 +305,13 @@ const ESCENAS = {
   
   gaztegune: () => `<img src="09_pagina.png" alt="9KAPITULUA" />`,
 
-  bunker: () => `<img src="10_pagina.png" alt="10KAPITULUA" />`,
+  pasadizo: () => `<img src="10_pagina.png" alt="10KAPITULUA" />`,
+  
+  bunker: () => `<img src="11_pagina.png" alt="11KAPITULUA" />`,
 
-  salida: () => `<img src="11_pagina.png" alt="11KAPITULUA" />`,
+  fuente_oro: () => `<img src="12_pagina.png" alt="12KAPITULUA" />`,
 
-  destruccion: () => `<img src="12_pagina.png" alt="12KAPITULUA" />`,
-
-  poder: () => `<img src="13_pagina.png" alt="13KAPITULUA" />`,
+  cueva_secreta: () => `<img src="13_pagina.png" alt="13KAPITULUA" />`,
 };
 
 /* ══════════════════════════════════════════
