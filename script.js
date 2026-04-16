@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════
- * CODEX OSCURO — Motor del juego
+ * eroski OSCURO — Motor del juego
  * Elige tu propia aventura — 13 páginas
  * ═══════════════════════════════════════════════════════
  */
@@ -48,153 +48,183 @@ const PAGINAS = [
     capitulo: 'II. KAPITULUA',
     titulo: 'LARRAMENDI FUTBOL ZELAIA',
     texto: `Bartolin Basteitara iritsi zenean, zelaia isilik zegoen. Landako tabernan galdetu zuen ea norbaitek zerbait arraroa ikusi zuen, baina inork ez zuen ezer ikusi. Harmailetan begiratu zuen eta ez zuen ezer aurkitu. Aldagelak arakatu zituen eta ez zuen arrastorik aurkitu. Baina bat-batean, zerbaitek atentzioa eman zion berdegunean. Bartolinen ama zelai erdian zegoen baloi baten ondoan.\n\nBartolin! Bartolin! – oihukatu zuen amak. Eskerrak iritsi zaren. Basteitan paseatzen ari nintzen eta futbol zelaiaren erdian baloi bat zegoela ikusi dut. Eta harrapatzera hurbildu naizenean, ohar bat zegoen baloiaren azpian.`,
-    lore: `En el desierto campo de Larramendi, la madre de Bartolín le guió hasta el círculo central, donde un balón solitario custodiaba un mensaje enigmático. Lo que parecía un simple descuido en Basteita se reveló como el primer acertijo de un juego macabro ideado por 'E'.`,
+    lore: `...`,
     desafio: {
-      galdera: `Bartolinek ohar bat aurkitu du, baina hitz bat falta da:\n\n"Triku berriz ikusi nahi baduzue, _____ pistei."\n\nZein da hitz falta dena?`,
-      erantzuna: 'jarraitu',
-      okerMezua: `Hori ez da... Saiatu berriro. Oharrak zer egiteko esaten du pisteekin?`,
+      galdera: `Zenbat pertsona daude futboleko 2 partida aldi berean jokatzen diren jokalekuan?`,
+      erantzuna: '30',
+      okerMezua: `Hori ez da... Saiatu berriro. Pista: Zelaiaren barruan jokalariak eta beste norbait daude.`,
     },
 	escena: 'larramendi_campo',
     opciones: [
-      { texto: '"Busco el Codex Oscuro para destruirlo"', destino: 5 },
-      { texto: '"Busco poder. Vine por el grimorio"', destino: 6 },
-      { texto: 'Atacarla sin responder', destino: 7 },
+      { texto: 'Zubi berrira joan', destino: 5 },
+      { texto: 'Frontoira joan', destino: 6 },
+      { texto: 'Eskolara itzuli', destino: 7 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 3 — La oscuridad
+  // PÁGINA 3 — El Ayuntamiento
   // ──────────────────────────────────────
   {
     id: 3,
     capitulo: 'III. KAPITULUA',
-    titulo: 'EL ABISMO QUE RESPIRA',
-    texto: `Avanzas con la mano en la pared húmeda. El viento que proviene de la oscuridad no es aire normal: tiene temperatura, tiene peso. Es como si algo respirara al final del pasillo.\n\nDespués de veinte pasos, tu pie toca el vacío. Justo a tiempo logras agarrarte a un saledizo de piedra. Bajo ti, a metros de profundidad, hay una sala iluminada por una luz azul pálida.\n\nEn las paredes del abismo hay figuras grabadas: guerreros, magos, criaturas. Todos convergiendo hacia un mismo punto. Y en ese punto hay una escalera de hierro oxidado que desciende hacia la sala azul.`,
-    lore: `ANOMALÍA DETECTADA: El Pozo de Ecos\n\nCualquier sonido pronunciado en este pasillo se duplica y regresa modificado. Los exploradores del siglo XII reportaron haber escuchado sus propias voces del futuro.`,
-    escena: 'abismo',
+    titulo: 'UDALETXEA',
+    texto: `Egun hartan Udaletxeko plaza bare zegoen. Bartolin arrastoen bila hasi zen. Arake tabernan galdetu zuen, baina Danik esan zion ez zuela ezer arrarorik ikusi. Gero, Posta Bulegoko langileak galdekatu zituen, baina ez zekiten ezer.\n\nUdaletxe atzetik zetorren soinu gogor bat entzun zuen. Plaza garbitzera zetorren eskobatzeko makina zen. Andonik ekortzeko makina gidatzen zuen. Bartolinek galdetu zion ea haur talde bat ikusi zuen handik korrika, baina ez zuen ezer ikusi.\n\nAzkenean, jarlekuak eta jardinerak aztertu ondoren, harrizko iturri txikira hurbildu eta kutxa itxi bat ikusi zuen.`,
+    lore: `...`,
+    desafio: {
+      galdera: `Kutxak 3 zenbakiko kodea eta ohar bat zituen, pista hauekin:<br>6-8-2: Zenbaki bat zuzena da eta posizio egokian dago.<br>6-1-4: Zenbaki bat zuzena da, baina posizio okerrean dago.<br>2-0-6: Bi zenbaki dira zuzenak, baina biak daude posizio okerrean.<br>7-3-8: Ezer ez da zuzena. Zenbaki horietako bat ere ez da kodearen parte.<br>8-7-0: Zenbaki bat zuzena da, baina posizio okerrean dago.`,
+      erantzuna: '0-4-2',
+      okerMezua: `Hori ez da... Saiatu berriro.\nPista: 4. pistako zenbakiak baztertuz hasten da.`,
+    },	
+	escena: 'ayuntamiento',
     opciones: [
-      { texto: 'Descender por la escalera de hierro', destino: 8 },
-      { texto: 'Gritar para explorar el abismo con el eco', destino: 9 },
-      { texto: 'Regresar y tomar el pasillo de la luz', destino: 2 },
+      { texto: 'Daniren dendara joan', destino: 8 },
+      { texto: 'Joan Eroskira', destino: 9 },
+      { texto: 'Joan Gaztegunera', destino: 2 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 4 — El grimorio
+  // PÁGINA 4 — Biblioteca
   // ──────────────────────────────────────
   {
     id: 4,
     capitulo: 'IV. KAPITULUA',
-    titulo: 'EL GRIMORIO DEL SUELO',
-    texto: `Te arrodillas junto al libro. Las páginas son de cuero humano —lo sabes sin que nadie te lo diga— y la tinta parece moverse, como gusanos de luz bajo el papel.\n\nLas palabras cambian mientras lees. Primero dicen tu nombre. Luego dicen cosas que aún no han ocurrido. Lees tres líneas antes de poder apartar los ojos:\n\n"El portador enfrentará a la Oráculo Ciega"\n"El portador encontrará la Llave de Hueso"\n"El portador elegirá entre el mundo y sí mismo"\n\nEl libro se cierra de golpe. Y en la oscuridad, algo se mueve.`,
-    lore: `OBJETO: El Pregrimorio\nCLASIFICACIÓN: Artefacto de primer orden\n\nNo confundir con el Codex Oscuro principal. Este tomo menor actúa como índice y advertencia. Quienes lo leen quedan marcados con el Sello del Destino.`,
-    escena: 'grimorio',
+    titulo: 'LIBURUTEGIA',
+    texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Xandals batzuk zeramatzaten, "E" letradun ezkutu batekin.`,
+    lore: `...`,
+    desafio: {
+      galdera: `Bartolinek liburua ireki zuenean, barruan mezu bat zegoela ikusi zuen:<br>Denek ezagutzen dute Udaletxeko plaza, baina ezagutzen al duzue plaza horren benetako izena?.`,
+      erantzuna: 'Doctor Madinabeitia',
+      okerMezua: `Hori ez da... Saiatu berriro. Google Maps-en bila dezakezue.`,
+    },
+	escena: 'biblioteca',
     opciones: [
-      { texto: 'Tomar el grimorio contigo', destino: 2 },
+      { texto: 'Tomar el biblioteca contigo', destino: 2 },
       { texto: 'Huir hacia el pasillo de la oscuridad', destino: 3 },
       { texto: 'Esperar y no moverte', destino: 10 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 5 — "Vine a destruirlo"
+  // PÁGINA 5 — Puente nuevo
   // ──────────────────────────────────────
   {
     id: 5,
     capitulo: 'V. KAPITULUA',
-    titulo: 'LA PRUEBA DE LA INTENCIÓN',
-    texto: `La Oráculo Ciega te observa en silencio durante un tiempo que parece eterno. Las velas fluctúan. Una de ellas cae y arde en el suelo sin quemarlo.\n\n— "Destruirlo. Qué interesante mentira te has contado a ti mismo." —\n\nSe acerca. Sus dedos, fríos como mármol, tocan tu frente. Una visión te golpea: te ves a ti mismo abriendo el Codex, leyendo las páginas prohibidas, y sonriendo con una sonrisa que no reconoces como tuya.\n\n— "El Codex ya está dentro de ti. La pregunta no es si lo destruirás. La pregunta es cuándo dejarás de fingir que no lo quieres." —\n\nTe ofrece un pequeño frasco de cristal negro. "Bebe esto si deseas ver el camino verdadero."`,
-    lore: `VISIÓN PROFÉTICA: Nivel Alto\n\nLa Oráculo Ciega tiene la capacidad de leer intenciones ocultas. Su diagnóstico rara vez falla, pero su interpretación puede estar sesgada por sus propias lealtades.`,
-    escena: 'oraculo',
+    titulo: 'ZUBI BERRIA',
+    texto: `Ibaiko ura indar handiz jaisten zen. Euri asko egin zuen, eta urak harkaitzen kontra jotzen zuen eta enborrak eta adarrak herrestan eramaten zituen. Pasealekuan ez zegoen inor.\n\nBartolin Loibeko parkera jaitsi zen. Zabu, txirrista eta jarleku guztiak arakatu zituen, baina ez zuen arrastorik aurkitu. Mutil bat zebilen txakurra paseatzen, eta galdetu zion ea zerbait arraroa ikusi zuen, baina mutilak ezetz esan zion.\n\nBat-batean, Bartolinek zubira begiratu zuen eta txandalez jantzitako haur talde bat ikusi zuen, denak kolore berekoak. Zubia azkar zeharkatu eta Koskojalesera zihoazen korrika. Bartolin haiengana korrika zihoala, zerbaitek atentzioa eman zion\n\n`,
+    lore: `...`,
+    desafio: {
+      galdera: `Zubi berriaren erdian ohar bat zegoen, honela zioena:<br>Espioiaren alfabetoan, letra bakoitza hiru posizio aurrerantz mugitzen da (A = D, B = E, C = F...). Zein hitz ezkutatzen da 'LOOFX' kodearen atzean?`,
+      erantzuna: 'Orria',
+      okerMezua: `Hori ez da... Saiatu berriro.`,
+    },
+	escena: 'puente_nuevo',
     opciones: [
-      { texto: 'Beber el líquido negro', destino: 8 },
-      { texto: 'Rechazar el frasco y exigir la salida', destino: 11 },
-      { texto: 'Acusarla de servirle al Codex', destino: 6 },
+      { texto: 'Urrearen Iturrirantz jarraitu', destino: 8 },
+      { texto: 'Futbol zelaira itzuli', destino: 11 },
+      { texto: 'Joan Gaztegunera', destino: 6 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 6 — "Vine por el poder"
+  // PÁGINA 6 — Fonton
   // ──────────────────────────────────────
   {
     id: 6,
     capitulo: 'VI. KAPITULUA',
-    titulo: 'EL PACTO DE SANGRE',
-    texto: `La anciana ríe. No es una risa humana: es el sonido del granito al quebrarse, de los huesos al crujir bajo la tierra.\n\n— "¡Honestidad! Hace décadas que nadie llega aquí con honestidad." —\n\nSe sienta en el altar y saca una pluma ennegrecida. "El Codex tiene un precio. Siempre lo ha tenido. Si quieres su poder, debes dejar algo aquí para siempre."\n\nSobre el altar aparecen tres objetos: un espejo que refleja tu rostro más joven, una caja de madera que late como un corazón, y un hilo de plata que parece ser el hilo de una vida.\n\n"Elige lo que darás y el camino al Codex se abrirá ante ti."`,
-    lore: `SISTEMA: El Precio del Codex\n\nTodo aquel que ha accedido al Codex Oscuro ha pagado un precio diferente. El Archimago Mordecaius entregó su nombre. La Emperatriz Vael entregó su sombra. Nadie entregó lo mismo dos veces.`,
-    escena: 'pacto',
+    titulo: 'FRONTOIA',
+    texto: `Frontoian zarata handia entzuten zen eta jendea oihuka eta animoka. Larrobeltzeko saskibaloi taldea Escolapiosen aurkako partida jokatzen ari zen. Partida zirraragarria zen. Larrobeltz 2 puntu galtzen ari zen eta 5 segundo bakarrik geratzen ziren. Azken segundoan Larrobeltzeko jokalari batek jaurtiketa urrun bat jaurti eta hirukoa sartu zuen. Azkenean, Larrobeltzek 61-60 irabazi zuen. Zaleak oso pozik zeuden, denak oihuka eta txaloka.\n\nBaina bat-batean mundu guztia gelditu egin zen Bartolin frontoira sartzen ikusi zuenean. Une horretan, Larrobeltzeko entrenatzailea Bartolinengana hurbildu zen eta saskietako batean itsatsita aurkitu zuen ohar bat eman zion.\n\n"`,
+    lore: `"Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu."`,
+    escena: 'fronton',
     opciones: [
-      { texto: 'Entregar el espejo (tu juventud)', destino: 8 },
-      { texto: 'Entregar la caja (algo que late en ti)', destino: 12 },
-      { texto: 'Negarte y robarle la pluma', destino: 7 },
+      { texto: 'Pilotalekuko ate sekretu batetik jaistea', destino: 8 },
+      { texto: 'Daniren dendara joan', destino: 12 },
+      { texto: 'Zubi zaharrera joan', destino: 7 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 7 — Ataque
+  // PÁGINA 7 — Tienda de Dani
   // ──────────────────────────────────────
   {
     id: 7,
     capitulo: 'VII. KAPITULUA',
-    titulo: 'LA FURIA DEL CANDIL',
-    texto: `Tu instinto te traiciona. Das un paso hacia la figura y extiendes el brazo.\n\nAntes de que tus dedos la toquen, docenas de velas se lanzan hacia ti como proyectiles de fuego viviente. El calor es insoportable. Retrocedes, tu manga arde brevemente antes de que el fuego muera solo.\n\nLa anciana no se ha movido. Sus ojos blancos te atraviesan.\n\n— "Interesante. La violencia como primer idioma. Conozco ese dialecto." —\n\nLas velas forman un círculo a tu alrededor. No hay salida visible. Pero en el suelo, donde ha caído tu sangre de una quemadura, aparece un símbolo: una llave.\n\n"La Llave de Hueso te ha reconocido. Eso... no debería ser posible."`,
-    lore: `EVENTO INESPERADO: Reconocimiento Arcano\n\nEl símbolo de la Llave de Hueso solo aparece ante quienes tienen sangre de la antigua estirpe de Eldrath. Se creía que dicha estirpe estaba extinta desde el Gran Silencio.`,
-    escena: 'fuego',
+    titulo: 'DANIREN DENDA',
+    texto: `Bartolin Daniren dendan sartu zenean, gominolak eta gozokiak usaintzen zituen denak. Dani, salmahaiaren atzean, Takis pakete batzuk ordenatzen ari zen, kezka-aurpegiz.\n\n— Aupa, Bartolin! — oihu egin zuen Danik —. Eskerrak agertzen zaren. Duela gutxi gazte batzuk sartu dira txandala jantzita, eta barre egiten zuten etengabe. Txikle bat ere ez dute erosi, baina kristalezko poto hau koloretako gozokiz beteta utzi didate eta eskolako ikasleentzat "opari" bat zela esan dute.\n\nBartolinek potoa aztertu zuen. Ezin zen ireki, zenbakizko giltzarrapo bat zuelako. Gozokiak geruza oso zehatzetan jarrita zeudela ikusi zuen. Ohar bat zegoen kristalezko potoari itsatsita."`,
+    lore: `...`,
+    desafio: {
+      galdera: `"Bide gozoa logikaz irekitzen da, ez gosez". Azpian jarraibide batzuk zeuden: gorria = 1, horia = 2, urdina = 3.<br>Bartolinek gozokiek sekuentzia bat osatzen zutela ikusi zuen: gorria, urdina, berdea eta morea.<br>Zer kode sartu beharko da giltzarrapoan irekitzeko?`,
+      erantzuna: '1334',
+      okerMezua: `Hori ez da... Saiatu berriro.`,
+    },
+	escena: 'tienda_dani',
     opciones: [
-      { texto: 'Tomar el símbolo del suelo', destino: 8 },
-      { texto: 'Preguntar a la anciana qué significa', destino: 5 },
-      { texto: 'Intentar escapar del círculo de velas', destino: 11 },
+      { texto: 'Joan Gaztegunera', destino: 8 },
+      { texto: 'Joan Eroskira', destino: 5 },
+      { texto: 'Zubi berrira joan', destino: 11 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 8 — La sala azul / El Codex
+  // PÁGINA 8 — Eroski
   // ──────────────────────────────────────
   {
     id: 8,
     capitulo: 'VIII. KAPITULUA',
-    titulo: 'EL CORAZÓN DE ELDRATH',
-    texto: `La sala azul es una cámara perfectamente esférica. No hay ángulos, no hay esquinas. La luz emana de las propias paredes, que están cubiertas de escritura en un idioma que tu mente comprende sin haberlo aprendido nunca.\n\nEn el centro de la esfera, suspendido en el aire, hay un libro. No grande ni pequeño: perfectamente ordinario, excepto por el hecho de que ninguna sombra lo toca.\n\nEL CODEX OSCURO.\n\nAl acercarte, las páginas se abren solas. Cada línea que lees se borra inmediatamente, como si el conocimiento solo pudiera existir durante el instante en que lo recibes. Tu mano tiembla sobre la cubierta.\n\nEsta es la elección que define todo.`,
-    lore: `EL CODEX OSCURO\nESTADO: Activo / Expectante\n\nEl Codex no es un libro. Es una entidad. Sus páginas contienen la gramática con la que fue escrito el universo. Cada vez que alguien lo lee, el universo se convierte en un borrador.`,
-    escena: 'codex',
+    titulo: 'EROSKI',
+    texto: `Eroskin sartu zenean, aire girotuak Bartolin freskatu zuen. Supermerkatuan gauza asko zeuden: kafea, galletak, jogurtak, frutak, barazkiak, etab. Denak oso itxura ona zuen. Bartolinek supermerkatua zeharkatu zuen harategira iritsi arte. Han zegoen Charles harategian hanburgesak prestatzen.\n\n— Bartolin, pozten naiz zu ikusteaz! — esan zuen bazter batean zegoen erosketa-gurdi bat seinalatuz —. Jertsean "E" bateko ezkutua duten haur batzuek kutxa hutsez betetako orga utzi dute, baina esan didate Alonsotegiko detektibe azkarrenak bakarrik jakingo lukeela falta den "produktua" aurkitzen.\n\nBartolin gurdira hurbildu zen. Esne kaxen eta galleta paketeen artean, kartazal bat aurkitu zuen, barra-kode bitxi baten marrazkia zuena.`,
+    lore: `...`,
+	desafio: {
+      galdera: `"Ez naiz bizi, baina hitzak gordetzen ditut.<br>Ez dut ahoa, baina istorioak kontatzen ditut.<br>Isilik nago beti, baina asko irakasten dut.<br>Zer naiz?`,
+      erantzuna: 'Liburua',
+      okerMezua: `Hori ez da... Saiatu berriro.`,
+    },
+    escena: 'eroski',
     opciones: [
-      { texto: 'Leer el Codex y absorber su poder', destino: 13 },
-      { texto: 'Destruirlo arrojándolo contra el suelo', destino: 12 },
-      { texto: 'Cerrar el libro y dejarlo donde está', destino: 11 },
+      { texto: 'Liburutegira joan', destino: 13 },
+      { texto: 'Joan gaztegunera', destino: 12 },
+      { texto: 'Joan Urrezko Iturrira', destino: 11 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 9 — El eco del abismo
+  // PÁGINA 9 — Gaztegune
   // ──────────────────────────────────────
   {
     id: 9,
     capitulo: 'IX. KAPITULUA',
-    titulo: 'EL ECO HABLA PRIMERO',
-    texto: `Gritas en el abismo. Tu voz rebota contra las paredes y regresa... pero con otro tono. Regresa diciendo cosas que no dijiste.\n\nEl eco dice: "Baja. El libro te espera. El libro siempre te ha esperado."\n\nLuego el eco dice algo que te hiela la sangre: dice tu nombre completo, incluyendo el apellido que nadie en el mundo debería conocer aquí.\n\nEntonces el eco calla. Y en su lugar, desde las profundidades de la sala azul, surge un canto. No es música: es una ecuación. Una secuencia perfecta de tonos que describen, sin palabras, la arquitectura de una puerta que no debería existir.\n\nEn el fondo del abismo, una luz azul parpadea tres veces.`,
-    lore: `FENÓMENO: Ecos Predictivos\n\nLos registros del Archivo de Valdris documentan 7 casos de exploradores que escucharon sus propios ecos futuros. De los 7, solo dos regresaron. Los otros cinco, se dice, decidieron quedarse.`,
-    escena: 'abismo',
-    opciones: [
-      { texto: 'Descender hacia la luz azul parpadeante', destino: 8 },
-      { texto: 'Responder al canto con tu propia voz', destino: 10 },
-      { texto: 'Huir hacia la sala de las velas', destino: 2 },
+    titulo: 'GAZTEGUNE',
+    texto: `Gaztegunean gazte batzuk ping-pongean jokatzen ari ziren, beste batzuk Play jokoan ari ziren eta beste batzuk Larrobeltz eta Larramendiren kromoak aldatzen ari ziren. Giroa alaia zen, baina zerbait ez zetorren bat. Neska-mutil batzuk Gazteguneko gune batean pilatu ziren.\n\nBartolin hurbildu zenean, kaxa handi itxi bat ikusi zuen. Julene oso kezkatuta zegoen, ez zekielako zergatik utzi zuten kutxa hori hor. Julenek Bartolin ikusi zuenean, esan zion:\n\n— Bartolin, begira honi! Kanpoko neska-mutil batzuek kutxa hau utzi eta korrika alde egin dute. Ez nituen ezagutzen, baina denak kirol-arropaz jantzita zeuden. Gainera, dena lokatzezko oinatzez beteta utzi dute, Urrearen iturritik zetozela esaten zuten.`,
+    lore: `...`,
+    desafio: {
+      galdera: `Kutxak teklatu bat zeukan zenbakiekin, eta ohar bat, honela zioena: "Zenbat dakizu Alonsotegiri buruz?"<br><br>Nola du izena Alonsotegitik igarotzen den ibaiak? Bere letrak kontatzen badituzu, lehen zenbakia izango duzu.<br><br>Nola du izena eskolara igotzen den kaleak? Kontatu bere letrak eta bigarren zenbakia izango duzu.<br><br>Zein da Alonsotegiko mendirik garaiena? Kontatu bere letrak eta bigarren zenbakia izango duzu.`,
+      erantzuna: '7611',
+      okerMezua: `Hori ez da... Saiatu berriro.`,
+    },
+	escena: 'gaztegune',
+	opciones: [
+      { texto: 'Bunkerrera joan.', destino: 8 },
+      { texto: 'Urrearen iturrira joan', destino: 10 },
+      { texto: 'Kobazulo sekretura joan', destino: 2 },
     ],
   },
 
   // ──────────────────────────────────────
-  // PÁGINA 10 — Espera / El ser en la oscuridad
+  // PÁGINA 10 — Bunker
   // ──────────────────────────────────────
   {
     id: 10,
     capitulo: 'X. KAPITULUA',
-    titulo: 'LO QUE HABITA EN EL UMBRAL',
-    texto: `Decides esperar. La quietud se vuelve densa, casi sólida.\n\nDespués de lo que podrían ser horas o segundos, algo emerge de la oscuridad. No es humano, pero tampoco es una criatura. Es una presencia que tiene la forma de aquello que más temes.\n\nNo te ataca. Se sienta frente a ti.\n\n— "Eres el primero que no huye ni ataca. Los pacientes tienen acceso a puertas que los impacientes nunca verán." —\n\nLa presencia pone algo en tu mano: una llave de hueso pulido, fría como el invierno eterno, con un símbolo grabado que reconoces del grimorio del suelo.\n\n"La sala esférica está al final del pasillo izquierdo, tercer panel de piedra verde. Pero recuerda: el Codex te dará lo que mereces, no lo que deseas."`,
-    lore: `ENTIDAD: El Guardián del Umbral\nNATURALEZA: Desconocida\n\nNo hay registros de confrontaciones con esta entidad. Solo hay registros de sus regalos, encontrados en manos de exploradores que nunca regresaron a contarlo.`,
-    escena: 'sombra',
+    titulo: 'BUNKER',
+    texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, bere urratsen oihartzunak durundi egiten zuen beldurraren aurrean ezkutu gisa erabili ziren hormigoizko galerietan. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Leize Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain". Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
+    lore: `Alonsotegiko erraietan zulatutako hormigoizko babesleku honek, gerra garaian herria babesteko, historiaz beteriko isiltasuna gordetzen du gaur egun. Garai batean bonbardaketetatik babesteko lekua izan zena, mendiaren iluntasunerantz ezinbestean daraman arrasto baten azken lekuko bihurtzen da orain.`,
+    escena: 'bunker',
     opciones: [
-      { texto: 'Usar la llave para ir directo al Codex', destino: 8 },
-      { texto: 'Preguntarle qué es exactamente', destino: 5 },
-      { texto: 'Rechazar la llave y buscar otra salida', destino: 11 },
+      { texto: 'Kobazulo sekretura joan', destino: 8 },
+      { texto: 'Joan Gaztegunera', destino: 5 },
+      { texto: 'Udaletxeko plazara joan', destino: 11 },
     ],
   },
 
@@ -205,8 +235,8 @@ const PAGINAS = [
     id: 11,
     capitulo: 'XI. KAPITULUA',
     titulo: 'EL FINAL DE LA PRUDENCIA',
-    texto: `Algo en ti dice que no. Que este lugar, este libro, este poder, no son para ti ni para nadie. Que hay cosas que deben permanecer enterradas.\n\nCaminas de espaldas. La Oráculo Ciega no te detiene. El abismo no te llama. Las velas parpadean una última vez y se apagan todas a la vez.\n\nEn la oscuridad total, encuentras la puerta de hierro. Los tres cerrojos se abren desde dentro, como si Eldrath mismo decidiera dejarte ir.\n\nSales a la superficie al amanecer. El sol te quema los ojos. El aire real, el aire del mundo, sabe a algo que no habías apreciado hasta ahora.\n\nNunca contarás lo que viste. Pero tampoco lo olvidarás jamás.`,
-    lore: `RESULTADO: Salida Voluntaria\nCONSECUENCIAS: Ninguna visible\n\nEl gremio de magos registra que aproximadamente el 12% de los exploradores que llegan a Eldrath deciden salir sin tocar el Codex. Viven vidas largas y tranquilas. Curiosamente, todos mueren sonriendo.`,
+    texto: `Algo en ti dice que no. Que este lugar, este libro, este poder, no son para ti ni para nadie. Que hay cosas que deben permanecer enterradas.\n\nCaminas de espaldas. La Oráculo Ciega no te detiene. El ayuntamiento no te llama. Las velas parpadean una última vez y se apagan todas a la vez.\n\nEn la oscuridad total, encuentras la puerta de hierro. Los tres cerrojos se abren desde dentro, como si Eldrath mismo decidiera dejarte ir.\n\nSales a la superficie al amanecer. El sol te quema los ojos. El aire real, el aire del mundo, sabe a algo que no habías apreciado hasta ahora.\n\nNunca contarás lo que viste. Pero tampoco lo olvidarás jamás.`,
+    lore: `RESULTADO: Salida Voluntaria\nCONSECUENCIAS: Ninguna visible\n\nEl gremio de magos registra que aproximadamente el 12% de los exploradores que llegan a Eldrath deciden salir sin tocar el eroski. Viven vidas largas y tranquilas. Curiosamente, todos mueren sonriendo.`,
     escena: 'salida',
     esFinal: true,
     opciones: [],
@@ -219,7 +249,7 @@ const PAGINAS = [
     id: 12,
     capitulo: 'XII. KAPITULUA',
     titulo: 'EL FINAL DEL SACRIFICIO',
-    texto: `Arrancas el Codex del aire. Vibra en tus manos como un ser vivo aterrorizado.\n\nLo arrojas contra el suelo de la sala esférica. Nada. Lo golpeas contra la pared. Nada. Entonces recuerdas: en el grimorio del suelo leíste que el Codex solo puede ser destruido por algo que el propio portador ame.\n\nEntiendes lo que debes hacer.\n\nUsas el recuerdo más querido que tienes —un momento de tu vida que nunca quisiste perder— y lo concentras en tus manos. El calor que emerge no es mágico: es simplemente humano.\n\nEl Codex Oscuro, por primera vez en 900 años, arde.\n\nLa sala esférica colapsa a tu alrededor. Pero tú ya estás afuera, corriendo, con las manos vacías y el corazón lleno de algo que no tiene nombre.`,
+    texto: `Arrancas el eroski del aire. Vibra en tus manos como un ser vivo aterrorizado.\n\nLo arrojas contra el suelo de la sala esférica. Nada. Lo golpeas contra la pared. Nada. Entonces recuerdas: en el biblioteca del suelo leíste que el eroski solo puede ser destruido por algo que el propio portador ame.\n\nEntiendes lo que debes hacer.\n\nUsas el recuerdo más querido que tienes —un momento de tu vida que nunca quisiste perder— y lo concentras en tus manos. El calor que emerge no es mágico: es simplemente humano.\n\nEl eroski Oscuro, por primera vez en 900 años, arde.\n\nLa sala esférica colapsa a tu alrededor. Pero tú ya estás afuera, corriendo, con las manos vacías y el corazón lleno de algo que no tiene nombre.`,
     lore: `RESULTADO: Destrucción del Artefacto\nCONSECUENCIAS: El Mundo Reescrito\n\nLos registros del Archivo de Valdris quedaron en blanco esa noche. Al día siguiente, en el mundo exterior, nadie recordaba por qué había guerras. Muchos lo llamaron milagro. Solo tú sabes el precio.`,
     escena: 'destruccion',
     esFinal: true,
@@ -232,8 +262,8 @@ const PAGINAS = [
   {
     id: 13,
     capitulo: 'XIII. KAPITULUA',
-    titulo: 'EL FINAL DEL CODEX',
-    texto: `Lees.\n\nNo puedes parar. Cada página devora a la siguiente. El idioma que no deberías entender lo entiendes todo: la sintaxis de la gravedad, la conjugación de la luz, la puntuación del tiempo.\n\nCuando terminas la última página, alzas la vista.\n\nLa sala esférica ha desaparecido. Las catacumbas han desaparecido. La Oráculo Ciega, el abismo, el eco, todo ha desaparecido. Solo queda el mundo, extendido ante ti como una página en blanco.\n\nEl Codex Oscuro ya no es un libro. Es tu memoria.\n\nPuedes reescribirlo todo.\n\nY eso, comprendes por fin, era exactamente lo que el Codex necesitaba que hicieras.`,
+    titulo: 'EL FINAL DEL eroski',
+    texto: `Lees.\n\nNo puedes parar. Cada página devora a la siguiente. El idioma que no deberías entender lo entiendes todo: la sintaxis de la gravedad, la conjugación de la luz, la puntuación del tiempo.\n\nCuando terminas la última página, alzas la vista.\n\nLa sala esférica ha desaparecido. Las catacumbas han desaparecido. La Oráculo Ciega, el ayuntamiento, el eco, todo ha desaparecido. Solo queda el mundo, extendido ante ti como una página en blanco.\n\nEl eroski Oscuro ya no es un libro. Es tu memoria.\n\nPuedes reescribirlo todo.\n\nY eso, comprendes por fin, era exactamente lo que el eroski necesitaba que hicieras.`,
     lore: `RESULTADO: Fusión con el Artefacto\nCONSECUENCIAS: Indefinidas\n\nEl Archivo de Valdris registra una única nota sobre este desenlace, escrita en un idioma que nadie ha podido descifrar. La última línea, sin embargo, está en texto común: "Y el mundo nunca supo que era ficción."`,
     escena: 'poder',
     esFinal: true,
@@ -254,26 +284,28 @@ const ESCENAS = {
   inicio: () => `<img src="01_pagina.png" alt="1KAPITULUA" />`,
 
   larramendi_campo: () => `<img src="02_pagina.png" alt="2KAPITULUA" />`,
+  
+  ayuntamiento: () => `<img src="03_pagina.png" alt="2KAPITULUA" />`,
 
-  abismo: () => `<img src="03_pagina.png" alt="3KAPITULUA" />`,
+  biblioteca: () => `<img src="04_pagina.png" alt="4KAPITULUA" />`,
 
-  grimorio: () => `<img src="04_pagina.png" alt="4KAPITULUA" />`,
+  puente_nuevo: () => `<img src="05_pagina.png" alt="5KAPITULUA" />`,
 
-  oraculo: () => `<img src="05_pagina.png" alt="5KAPITULUA" />`,
+  fronton: () => `<img src="06_pagina.png" alt="6KAPITULUA" />`,
 
-  pacto: () => `<img src="06_pagina.png" alt="6KAPITULUA" />`,
+  tienda_dani: () => `<img src="07_pagina.png" alt="7KAPITULUA" />`,
 
-  fuego: () => `<img src="07_pagina.png" alt="7KAPITULUA" />`,
+  eroski: () => `<img src="08_pagina.png" alt="8KAPITULUA" />`,
+  
+  gaztegune: () => `<img src="09_pagina.png" alt="9KAPITULUA" />`,
 
-  codex: () => `<img src="08_pagina.png" alt="8KAPITULUA" />`,
+  bunker: () => `<img src="10_pagina.png" alt="10KAPITULUA" />`,
 
-  sombra: () => `<img src="09_pagina.png" alt="9KAPITULUA" />`,
+  salida: () => `<img src="11_pagina.png" alt="11KAPITULUA" />`,
 
-  salida: () => `<img src="10_pagina.png" alt="10KAPITULUA" />`,
+  destruccion: () => `<img src="12_pagina.png" alt="12KAPITULUA" />`,
 
-  destruccion: () => `<img src="12_pagina.png" alt="11KAPITULUA" />`,
-
-  poder: () => `<img src="11_pagina.png" alt="11KAPITULUA" />`,
+  poder: () => `<img src="13_pagina.png" alt="13KAPITULUA" />`,
 };
 
 /* ══════════════════════════════════════════
@@ -285,14 +317,14 @@ const Estado = {
   historial: [],
   /** Guarda en localStorage */
   guardar() {
-    localStorage.setItem('codex_oscuro_save', JSON.stringify({
+    localStorage.setItem('triku_save', JSON.stringify({
       paginaActual: this.paginaActual,
       historial: this.historial,
     }));
   },
   /** Carga desde localStorage */
   cargar() {
-    const raw = localStorage.getItem('codex_oscuro_save');
+    const raw = localStorage.getItem('triku_save');
     if (!raw) return false;
     try {
       const data = JSON.parse(raw);
@@ -303,7 +335,7 @@ const Estado = {
   },
   /** Borra el guardado */
   borrar() {
-    localStorage.removeItem('codex_oscuro_save');
+    localStorage.removeItem('triku_save');
     this.paginaActual = 1;
     this.historial    = [];
   },
@@ -558,7 +590,7 @@ function activarDesafio(desafio, opciones, esFinal) {
   let intentos = 0;
 
   // Resetear widget
-  DOM.challengeQuestion.textContent = desafio.galdera;
+  DOM.challengeQuestion.innerHTML = desafio.galdera;
   DOM.challengeInput.value = '';
   DOM.challengeInput.classList.remove('input-error');
   DOM.challengeErrDiv.classList.add('hidden');
