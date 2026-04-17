@@ -827,9 +827,19 @@ html, body {
 }
 
 /* ══════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE - MEJORADO PARA MÓVIL
    ══════════════════════════════════════════ */
+
 @media (max-width: 768px) {
+  /* Reducir padding de las páginas */
+  .page-left,
+  .page-right {
+    padding: 14px 16px;  /* Reducido de 24px 28px */
+    flex: 0 0 auto;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
   .book-container {
     flex-direction: column;
   }
@@ -845,15 +855,9 @@ html, body {
     letter-spacing: 20px;
   }
 
-  .page-left,
-  .page-right {
-    flex: 0 0 auto;
-    max-height: 50vh;
-    overflow-y: auto;
-  }
-
   .image-frame {
     max-height: 25vh;
+    margin-bottom: 10px;  /* Reducido */
   }
 
   .game-title {
@@ -866,16 +870,43 @@ html, body {
 
   .hud-label { display: none; }
 
-  .choice-btn {
-    font-size: 7px;
-    padding: 8px 10px;
+  /* ⭐ TEXTO MÁS PEQUEÑO */
+  .story-text {
+    font-size: 11px;    /* Reducido de 14px */
+    line-height: 1.7;   /* Reducido de 1.85 */
   }
 
-  .story-text {
-    font-size: 11px;
+  /* ⭐ CHOICES MÁS COMPACTOS */
+  .choice-btn {
+    font-size: 7px;
+    padding: 8px 10px;  /* Reducido */
+    line-height: 1.5;   /* Reducido */
+  }
+
+  /* ⭐ LORE BOX MÁS PEQUEÑO */
+  .lore-text {
+    font-size: 12px;    /* Reducido de 15px */
+    line-height: 1.6;   /* Reducido */
+  }
+
+  /* ⭐ DESAFÍO MÁS COMPACTO */
+  .challenge-question {
+    font-size: 11px;    /* Reducido de 13px */
+    line-height: 1.5;
+  }
+
+  .challenge-input {
+    font-size: 8px;     /* Reducido */
+    padding: 6px 8px;   /* Reducido */
+  }
+
+  .btn-challenge-submit {
+    font-size: 7px;
+    padding: 6px 10px;
   }
 }
 
+/* PANTALLAS MÁS PEQUEÑAS (móviles) */
 @media (max-width: 480px) {
   .title-box {
     padding: 20px 24px;
@@ -889,6 +920,57 @@ html, body {
   .btn-start {
     font-size: 9px;
     padding: 12px 20px;
+  }
+
+  /* ⭐ REDUCIR AÚN MÁS EN MÓVILES PEQUEÑOS */
+  .page-left,
+  .page-right {
+    padding: 10px 12px;
+    max-height: auto;
+  }
+
+  .story-text {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .choice-btn {
+    font-size: 6.5px;
+    padding: 7px 8px;
+  }
+
+  .lore-text {
+    font-size: 11px;
+  }
+
+  .chapter-label {
+    font-size: 6px;
+  }
+
+  .choices-label {
+    font-size: 6px;
+  }
+}
+
+/* PANTALLAS ULTRA-PEQUEÑAS (< 360px) */
+@media (max-width: 360px) {
+  .page-left,
+  .page-right {
+    padding: 8px 10px;
+  }
+
+  .story-text {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .choice-btn {
+    font-size: 6px;
+    padding: 6px 8px;
+  }
+
+  .image-frame {
+    max-height: 20vh;
   }
 }
 
