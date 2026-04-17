@@ -31,7 +31,7 @@ const PAGINAS = [
     capitulo: 'I. KAPITULUA - TRIKU DESAGERTU DA',
     titulo: 'TRIKU DESAGERTU DA',
     texto: `Goiz lasaia zen Alonsotegiko eskolan. Haurrak beren geletan zeuden irratia entzuten, eta bat-batean oihu batzuk entzun zituzten patiotik zetozela:\n\n— TRIKU DESAGERTU DA!!\n\nDenak isilik geratu ziren. Xabi Trikuren bila joan zen eskola osoan zehar, baina ez zuen aurkitu. Triku, gure eskolako maskota, ez zegoen bere ohiko txokoan.\n\nZuzendaritzatik, Irantzuk Bartolini deitu zion, Alonsotegiko detektibeari. Minutu batzuk barru, bere txapela eta bere irribarre bihurria jantzita agertu zen. Arrastoak jaso eta susmagarriak izan zitezkeenak galdekatu ondoren, oso seguru esan zuen:\n\n— Lasai, ni arduratuko naiz!\n\nBartolinek ohar bat aurkitu zuen gimnasioko zoruan, honela zioena:\n\n"Triku berriz ikusi nahi baduzue, jarraitu pistei. — E. Sinatua"\n\nBartolinek hasperen egin zuen eta bere buruari galdetu zion ea nortzuk izan zitezkeen "E" eta zergatik bahitu zuen Triku, eta orduan esan zuen:\n\n— Abentura ona izango da hau...\n\n`,
-    lore: `Eskolako ohiko isiltasuna hautsi egin zen irratiak musika emititzeari utzi eta albisterik txarrenari bide eman zionean. Trikuko txokoan hutsunea baino ez da geratzen, Alonsotegi osoa kolokan jarri duen misterioaren hasiera markatzen duena. Orain, gure maskotaren patua Bartolinen maltzurkeriaren eta 'E' misteriotsuak herrian utzi dituen pisten araberakoa da.`,
+    lore: `Trikuren desagerpenak Alonsotegi astindu du, eta orain Bartolinen trebetasuna eta "E" misteriotsuaren pistak dira maskota berreskuratzeko gako bakarra.`,
     escena: 'inicio',
     opciones: [
       { texto: 'Larramendi futbol zelaira joan', destino: 2 },
