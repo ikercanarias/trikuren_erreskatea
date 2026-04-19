@@ -7,6 +7,8 @@
 
 'use strict';
 
+const DEBUG_MODE = true; // Cambiar a false para activar animaciones
+
 /* ══════════════════════════════════════════
    1. DATOS DEL JUEGO — Las 13 páginas
    ══════════════════════════════════════════ */
@@ -34,9 +36,9 @@ const PAGINAS = [
     lore: `Trikuren desagerpenak Alonsotegi astindu du, eta orain Bartolinen trebetasuna eta "E" misteriotsuaren pistak dira maskota berreskuratzeko gako bakarra.`,
     escena: 'inicio',
     opciones: [
-      { texto: 'Larramendi futbol zelaira joan', destino: 2 },
-      { texto: 'Udaletxeko plazan ikertzea', destino: 3 },
-      { texto: 'Liburutegian pistak bilatu', destino: 4 },
+      { texto: '1. Larramendi futbol zelaira joan', destino: 2 },
+      { texto: '2. Udaletxeko plazan ikertzea', destino: 3 },
+      { texto: '3. Liburutegian pistak bilatu', destino: 4 },
     ],
   },
 
@@ -56,9 +58,9 @@ const PAGINAS = [
     },
 	escena: 'larramendi_campo',
     opciones: [
-      { texto: 'Zubi berrira joan', destino: 5 },
-      { texto: 'Frontoira joan', destino: 6 },
-      { texto: 'Eskolara itzuli', destino: 1 },
+      { texto: '1. Zubi berrira joan', destino: 5 },
+      { texto: '2. Frontoira joan', destino: 6 },
+      { texto: '3. Eskolara itzuli', destino: 1 },
     ],
   },
 
@@ -78,9 +80,9 @@ const PAGINAS = [
     },	
 	escena: 'ayuntamiento',
     opciones: [
-      { texto: 'Daniren dendara joan', destino: 7 },
-      { texto: 'Eroskira joan', destino: 8 },
-      { texto: 'Gaztegunera joan', destino: 9 },
+      { texto: '1. Daniren dendara joan', destino: 7 },
+      { texto: '2. Eroskira joan', destino: 8 },
+      { texto: '3. Gaztegunera joan', destino: 9 },
     ],
   },
 
@@ -100,9 +102,9 @@ const PAGINAS = [
     },
 	escena: 'biblioteca',
     opciones: [
-      { texto: 'Pasabidera sartzea', destino: 10 },
-      { texto: 'Bunkerrera joan', destino: 11 },
-      { texto: 'Udaletxeko plazara joan', destino: 3 },
+      { texto: '1. Pasabidera sartzea', destino: 10 },
+      { texto: '2. Bunkerrera joan', destino: 11 },
+      { texto: '3. Udaletxeko plazara joan', destino: 3 },
     ],
   },
 
@@ -122,9 +124,9 @@ const PAGINAS = [
     },
 	escena: 'puente_nuevo',
     opciones: [
-      { texto: 'Urrearen Iturrirantz jarraitu', destino: 12 },
-      { texto: 'Futbol zelaira joan', destino: 2 },
-      { texto: 'Gaztegunera joan', destino: 9 },
+      { texto: '1. Urrearen Iturrirantz jarraitu', destino: 12 },
+      { texto: '2. Futbol zelaira joan', destino: 2 },
+      { texto: '3. Gaztegunera joan', destino: 9 },
     ],
   },
 
@@ -135,13 +137,18 @@ const PAGINAS = [
     id: 6,
     capitulo: 'VI. KAPITULUA - FRONTOIA',
     titulo: 'FRONTOIA',
-    texto: `Frontoian zarata handia entzuten zen eta jendea oihuka eta animoka. Larrobeltzeko saskibaloi taldea Escolapiosen aurkako partida jokatzen ari zen. Partida zirraragarria zen. Larrobeltz 2 puntu galtzen ari zen eta 5 segundo bakarrik geratzen ziren. Azken segundoan Larrobeltzeko jokalari batek jaurtiketa urrun bat jaurti eta hirukoa sartu zuen. Azkenean, Larrobeltzek 61-60 irabazi zuen. Zaleak oso pozik zeuden, denak oihuka eta txaloka.\n\nBaina bat-batean mundu guztia gelditu egin zen Bartolin frontoira sartzen ikusi zuenean. Une horretan, Larrobeltzeko entrenatzailea Bartolinengana hurbildu zen eta saskietako batean itsatsita aurkitu zuen ohar bat eman zion."`,
-    lore: `"Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu."`,
-    escena: 'fronton',
+    texto: `Frontoian zarata handia entzuten zen eta jendea oihuka eta animoka. Larrobeltzeko saskibaloi taldea Escolapiosen aurkako partida jokatzen ari zen. Partida zirraragarria zen. Larrobeltz 2 puntu galtzen ari zen eta 5 segundo bakarrik geratzen ziren. Azken segundoan Larrobeltzeko jokalari batek jaurtiketa urrun bat jaurti eta hirukoa sartu zuen. Azkenean, Larrobeltzek 61-60 irabazi zuen. Zaleak oso pozik zeuden, denak oihuka eta txaloka.\n\nBaina bat-batean mundu guztia gelditu egin zen Bartolin frontoira sartzen ikusi zuenean. Une horretan, Larrobeltzeko entrenatzailea Bartolinengana hurbildu zen eta saskietako batean itsatsita aurkitu zuen ohar bat eman zion.`,
+    lore: `Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu.`,
+    desafio: {
+      galdera: `Saskia sartu duzue??`,
+      erantzuna: 'Bai',
+      okerMezua: `Saiatu berriro.`,
+    },
+	escena: 'fronton',
     opciones: [
-      { texto: 'Frontoiko ate sekretu batetik jaistea', destino: 6 },
-      { texto: 'Daniren dendara joan', destino: 7 },
-      { texto: 'Bunkerrara joan', destino: 11 },
+      { texto: '1. Frontoiko ate sekretu batetik jaistea', destino: 10 },
+      { texto: '2. Daniren dendara joan', destino: 7 },
+      { texto: '3. Bunkerrara joan', destino: 11 },
     ],
   },
 
@@ -152,7 +159,7 @@ const PAGINAS = [
     id: 7,
     capitulo: 'VII. KAPITULUA - DANIREN DENDA',
     titulo: 'DANIREN DENDA',
-    texto: `Bartolin Daniren dendan sartu zenean, gominolak eta gozokiak usaintzen zituen denak. Dani, salmahaiaren atzean, Takis pakete batzuk ordenatzen ari zen, kezka-aurpegiz.\n\n— Aupa, Bartolin! — oihu egin zuen Danik —. Eskerrak agertzen zaren. Duela gutxi gazte batzuk sartu dira txandala jantzita, eta barre egiten zuten etengabe. Txikle bat ere ez dute erosi, baina kristalezko poto hau koloretako gozokiz beteta utzi didate eta eskolako ikasleentzat "opari" bat zela esan dute.\n\nBartolinek potoa aztertu zuen. Ezin zen ireki, zenbakizko giltzarrapo bat zuelako. Gozokiak geruza oso zehatzetan jarrita zeudela ikusi zuen. Ohar bat zegoen kristalezko potoari itsatsita."`,
+    texto: `Bartolin Daniren dendan sartu zenean, gominolak eta gozokiak usaintzen zituen denak. Dani, salmahaiaren atzean, Takis pakete batzuk ordenatzen ari zen, kezka-aurpegiz.\n\n— Aupa, Bartolin! — oihu egin zuen Danik —. Eskerrak agertzen zaren. Duela gutxi gazte batzuk sartu dira txandala jantzita, eta barre egiten zuten etengabe. Txikle bat ere ez dute erosi, baina kristalezko poto hau koloretako gozokiz beteta utzi didate eta eskolako ikasleentzat "opari" bat zela esan dute.\n\nBartolinek potoa aztertu zuen. Ezin zen ireki, zenbakizko giltzarrapo bat zuelako. Gozokiak geruza oso zehatzetan jarrita zeudela ikusi zuen. Ohar bat zegoen kristalezko potoari itsatsita.`,
     lore: `...`,
     desafio: {
       galdera: `Jarraibide batzuk zeuden: gorria = 1, horia = 2, urdina = 3.<br>Bartolinek gozokiek sekuentzia bat osatzen zutela ikusi zuen: gorria, urdina, laranja eta morea.<br>Zer kode sartu beharko da giltzarrapoan irekitzeko?`,
@@ -161,9 +168,9 @@ const PAGINAS = [
     },
 	escena: 'tienda_dani',
     opciones: [
-      { texto: 'Gaztegunera joan', destino: 9 },
-      { texto: 'Eroskira joan', destino: 8 },
-      { texto: 'Zubi berrira joan', destino: 5 },
+      { texto: '1. Gaztegunera joan', destino: 9 },
+      { texto: '2. Eroskira joan', destino: 8 },
+      { texto: '3. Zubi berrira joan', destino: 5 },
     ],
   },
 
@@ -177,15 +184,15 @@ const PAGINAS = [
     texto: `Eroskin sartu zenean, aire girotuak Bartolin freskatu zuen. Supermerkatuan gauza asko zeuden: kafea, galletak, jogurtak, frutak, barazkiak, etab. Denak oso itxura ona zuen. Bartolinek supermerkatua zeharkatu zuen harategira iritsi arte. Han zegoen Carlos harategian hanburgesak prestatzen.\n\n— Bartolin, pozten naiz zu ikusteaz! — esan zuen bazter batean zegoen erosketa-gurdi bat seinalatuz —. Jertsean "E" bateko ezkutua duten haur batzuek kutxa hutsez betetako orga utzi dute, baina esan didate Alonsotegiko detektibe azkarrenak bakarrik jakingo lukeela falta den "produktua" aurkitzen.\n\nBartolin orgara hurbildu zen. Esne kaxen eta galleta paketeen artean, kartazal bat aurkitu zuen, barra-kode bitxi baten marrazkia zuena.`,
     lore: `...`,
 	desafio: {
-      galdera: `"Ez naiz bizi, baina hitzak gordetzen ditut.<br>Ez dut ahoa, baina istorioak kontatzen ditut.<br>Isilik nago beti, baina asko irakasten dut.<br>Zer naiz?`,
+      galdera: `Ez naiz bizi, baina hitzak gordetzen ditut.<br>Ez dut ahoa, baina istorioak kontatzen ditut.<br>Isilik nago beti, baina asko irakasten dut.<br>Zer naiz?`,
       erantzuna: 'Liburua',
       okerMezua: `Hori ez da... Saiatu berriro.`,
     },
     escena: 'eroski',
     opciones: [
-      { texto: 'Liburutegira joan', destino: 4 },
-      { texto: 'Gaztegunera joan', destino: 9 },
-      { texto: 'Bunkerrara joan', destino: 11 },
+      { texto: '1. Liburutegira joan', destino: 4 },
+      { texto: '2. Gaztegunera joan', destino: 9 },
+      { texto: '3. Bunkerrara joan', destino: 11 },
     ],
   },
 
@@ -199,15 +206,15 @@ const PAGINAS = [
     texto: `Gaztegunean gazte batzuk ping-pongean jokatzen ari ziren, beste batzuk Play jokoan ari ziren eta beste batzuk Larrobeltz eta Larramendiren kromoak aldatzen ari ziren. Giroa alaia zen, baina zerbait ez zetorren bat. Neska-mutil batzuk Gazteguneko gune batean pilatu ziren.\n\nBartolin hurbildu zenean, kaxa handi itxi bat ikusi zuen. Julene oso kezkatuta zegoen, ez zekielako zergatik utzi zuten kutxa hori hor. Julenek Bartolin ikusi zuenean, esan zion:\n\n— Bartolin, begira honi! Kanpoko neska-mutil batzuek kutxa hau utzi eta korrika alde egin dute. Ez nituen ezagutzen, baina denak kirol-arropaz jantzita zeuden. Gainera, dena lokatzezko oinatzez beteta utzi dute, Urrearen iturritik zetozela esaten zuten. Kutxak ohar bat eta teklatu bat zeukan zenbakiekin.`,
     lore: `...`,
     desafio: {
-      galdera: `"Zenbat dakizu Alonsotegiri buruz?"<br><br>Nola du izena Alonsotegitik igarotzen den ibaiak? Bere letrak kontatzen badituzu, lehen zenbakia izango duzu.<br><br>Nola du izena eskolara igotzen den kaleak? Kontatu bere letrak eta bigarren zenbakia izango duzu.<br><br>Zein da Alonsotegiko mendirik garaiena? Kontatu bere letrak eta bigarren zenbakia izango duzu.`,
+      galdera: `Zenbat dakizu Alonsotegiri buruz?<br><br>Nola du izena Alonsotegitik igarotzen den ibaiak? Bere letrak kontatzen badituzu, lehen zenbakia izango duzu.<br><br>Nola du izena eskolara igotzen den kaleak? Kontatu bere letrak eta bigarren zenbakia izango duzu.<br><br>Zein da Alonsotegiko mendirik garaiena? Kontatu bere letrak eta bigarren zenbakia izango duzu.`,
       erantzuna: '7611',
       okerMezua: `Hori ez da... Saiatu berriro.`,
     },
 	escena: 'gaztegune',
 	opciones: [
-      { texto: 'Bunkerrera joan.', destino: 11 },
-      { texto: 'Pasabide secretura joan', destino: 10 },
-      { texto: 'Liburutegira joan', destino: 4 },
+      { texto: '1. Bunkerrera joan', destino: 11 },
+      { texto: '2. Pasabide secretura joan', destino: 10 },
+      { texto: '3. Liburutegira joan', destino: 4 },
     ],
   },
 
@@ -218,13 +225,13 @@ const PAGINAS = [
     id: 10,
     capitulo: 'X. KAPITULUA - PASABIDE SECRETUA',
     titulo: 'PASABIDE SECRETUA',
-    texto: `Hezetasunak Bartolinen aurpegia jo zuen eskailera estuan behera zihoala. Pasabideko hormak harri zaharrez eginak zeuden, eta entzuten zen soinu bakarra uraren urruneko jarioa zen, lurretik iragazten zena. Bere mugikorreko linterna piztu eta argia dantzan hasi zen itzalen gainean, zoru hareatsuan arrasto freskoak erakutsiz. Bat-batean, haur-ahots batzuk entzun ziren tunelaren atzealdean, hormen oihartzunak anplifikaturik:\n— Azkar, ez gaitzatela harrapatu! — xuxurlatzen zuen norbaitek —. Bartolinek kobazulora iritsi aurretik aurkitzen bagaitu, akabo gure plana!\nBartolin paretari itsatsi eta hanka puntetan aurreratu zen. Izkina batetik begira, haur batzuk barrez entzun zituen. Mutikoak ziren! Bizkarrean argi eta garbi irakur zitekeen: "Eskolapioak".\n"E" koak Escolapios ikastetxeko ikasleak ziren! Urduri ziruditen eta manta baten barruan mugitzen zen zerbait zeramaten. Hala ere, Bartolinen aurre-aurrean, pasabidea bi norabidetan banatzen zen: eguneko argirantz igotzen zen arrapala bat eta tunel ilun bat, ahotsen arrastoari jarraituz Alonsotegirantz hondoratzen zena."`,
+    texto: `Hezetasunak Bartolinen aurpegia jo zuen eskailera estuan behera zihoala. Pasabideko hormak harri zaharrez eginak zeuden, eta entzuten zen soinu bakarra uraren urruneko jarioa zen, lurretik iragazten zena. Bere mugikorreko linterna piztu eta argia dantzan hasi zen itzalen gainean, zoru hareatsuan arrasto freskoak erakutsiz. Bat-batean, haur-ahots batzuk entzun ziren tunelaren atzealdean, hormen oihartzunak anplifikaturik:\n— Azkar, ez gaitzatela harrapatu! — xuxurlatzen zuen norbaitek —. Bartolinek kobazulora iritsi aurretik aurkitzen bagaitu, akabo gure plana!\nBartolin paretari itsatsi eta hanka puntetan aurreratu zen. Izkina batetik begira, haur batzuk barrez entzun zituen. Mutikoak ziren! Bizkarrean argi eta garbi irakur zitekeen: "Eskolapioak".\n"E" koak Escolapios ikastetxeko ikasleak ziren! Urduri ziruditen eta manta baten barruan mugitzen zen zerbait zeramaten. Hala ere, Bartolinen aurre-aurrean, pasabidea bi norabidetan banatzen zen: eguneko argirantz igotzen zen arrapala bat eta tunel ilun bat, ahotsen arrastoari jarraituz Alonsotegirantz hondoratzen zena.`,
     lore: `Lurraren erraietan, Bartolinek 'E' -aren arrastoa jarraitzen du eta bere sekretua arretaz gordetzen duen gazte talde batekin topo egiten du.`,
     escena: 'pasadizo',
     opciones: [
-      { texto: 'Urrearen iturrira joan.', destino: 12 },
-      { texto: 'Irteerara igo.', destino: 5 },
-      { texto: 'Liburutegira joan', destino: 4 },
+      { texto: '1. Bunkerrara joan', destino: 11 },
+      { texto: '2. Zubi berrira joan', destino: 5 },
+      { texto: '3. Liburutegira joan', destino: 4 },
     ],
   },
 
@@ -235,13 +242,13 @@ const PAGINAS = [
     id: 11,
     capitulo: 'X. KAPITULUA - BUNKER',
     titulo: 'BUNKER',
-    texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, bere urratsen oihartzunak durundi egiten zuen beldurraren aurrean ezkutu gisa erabili ziren hormigoizko galerietan. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Leize Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain". Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
+    texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, bere urratsen oihartzunak durundi egiten zuen beldurraren aurrean ezkutu gisa erabili ziren hormigoizko galerietan. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Leize Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain. Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
     lore: `Alonsotegiko erraietan zulatutako hormigoizko babesleku honek, gerra garaian herria babesteko, historiaz beteriko isiltasuna gordetzen du gaur egun. Garai batean bonbardaketetatik babesteko lekua izan zena, mendiaren iluntasunerantz ezinbestean daraman arrasto baten azken lekuko bihurtzen da orain.`,
     escena: 'bunker',
     opciones: [
-      { texto: 'Pasabidera sartzea', destino: 10 },
-      { texto: 'Gaztegunera joan', destino: 9 },
-      { texto: 'Udaletxeko plazara joan', destino: 3 },
+      { texto: '1. Pasabidera joan', destino: 10 },
+      { texto: '2. Gaztegunera joan', destino: 9 },
+      { texto: '3. Udaletxeko plazara joan', destino: 3 },
     ],
   },
 
@@ -256,9 +263,9 @@ const PAGINAS = [
     lore: `Urrezko Iturria ederra da. Asko gustatzen zaigu eskusio bidez ibiltzea eta inguruan paseatzea.`,
     escena: 'fuente_oro',
     opciones: [
-      { texto: 'Kobazulo sekretura joan', destino: 13 },
-      { texto: 'Zubi berrira joan', destino: 5 },
-      { texto: 'Eroskira joan', destino: 8 },
+      { texto: '1. Kobazulo sekretura joan', destino: 13 },
+      { texto: '2. Zubi berrira joan', destino: 5 },
+      { texto: '3. Eroskira joan', destino: 8 },
     ],
   },
 
@@ -270,10 +277,10 @@ const PAGINAS = [
     capitulo: 'XIII. KAPITULUA - EZKUTUKO KOBAZULOA',
     titulo: 'EZKUTUKO KOBAZULOA',
     texto: `Bartolin oin-puntetan joan zen kobazuloaren sarreratik, bere txapelari eutsiz, nerbioekin eror ez zedin. Bat-batean, aho zabalik geratu zen. Ez zegoen munstrorik, ez bilauik, ez tranpa ilunik. Eskolapioetako haurrak gezurrezko su txiki baten inguruan eserita zeuden (linternekin eta paper zelofanarekin egina), eta erdian Triku zegoen!\nGure maskota ez zen sufritzen ari. Aitzitik, eroso zegoen kuxin baten gainean etzanda, Eskolapiokoek sagar zatitxoak jaten eman eta ipuin bat irakurtzen zioten bitartean. Bartolin ikustean, haurrek jauzi egin zuten eta tomateak bezain gorri jarri ziren.\n— Harrapakinak! — oihu egin zuen Bartolinek, besoak gurutzatuz irribarre pikaroz —. Jakin al daiteke zer egiten duen Alonsotegiko trikurik ospetsuenak kobazulo honetan?\nEskolapioetako haur batek aitortu zuen: — Izan ere... zuen maskota Bizkaia osoko ederrena da! Gure eskolan lehortzen ari den landare bakarra daukagu... Bahiketa sentitzen dugu, asteburuko mailegu bat besterik ez zen!\nBartolinek algara egin zuen, eta burrunba egin zuen kobazulo osoan. — A zer sustoa eman diguzuen! Triku ez da entrenatzen, Triku partekatu egiten da. Baina hurrengoan, ohar misteriotsu baten ordez, bidali WhatsApp bat eta frontoira jolastera gonbidatuko zaituztegu!\nTrikuk, dena ulertuko balu bezala, aharrausi txiki bat egin zuen, eta Eskolapioen umeengana hurbildu zen azken besarkada bat ematera (kontu handiz, noski). Alonsotegiko haurrak, Bartolinen atzetik zetozenak, bat-batean agertu ziren eta, haserretu beharrean, baloi batzuk atera zituzten.\n— Aizue! — esan zuten —. Maskota bat nahi baduzue, gurea bezalako maskota bat egiten lagunduko dizuegu!\nEta horrela, bahiketa misteriotsu bat bezala hasi zena barre-festa batekin eta lagun berriekin amaitu zen. Triku eskolako bere txokora itzuli zen, baina oraingoan bufanda berri batekin "E" hizkiarekin eta lagun berri askorekin. Alonsotegin badakigu, azkenean, pistarik onenak beti leku berera eramaten duela: adiskidetasuna!`,
-    lore: `ZORIONAK!"`,
+    lore: `ZORIONAK!`,
     escena: 'cueva_secreta',
     esFinal: true,
-    opciones: [],
+    opciones: [{ texto: 'AMAITU', destino: 13 }],
   },
 ];
 
@@ -426,7 +433,21 @@ function typewriter(element, texto, velocidad = 18) {
   return new Promise((resolve) => {
     if (typewriterTimeout) clearTimeout(typewriterTimeout);
     element.innerHTML = '';
-    let i = 0;
+    
+	if (DEBUG_MODE) {
+      // Mostrar todo instantáneamente
+      const parrafos = texto.split('\n');
+      parrafos.forEach((parrafo) => {
+        const pEl = document.createElement('p');
+        pEl.style.marginBottom = '0.8em';
+        pEl.textContent = parrafo;
+        element.appendChild(pEl);
+      });
+      resolve();
+      return;
+    }
+	
+	let i = 0;
 
     // Dividir en párrafos para respetar \n
     const parrafos = texto.split('\n');
@@ -536,11 +557,12 @@ function renderizarPagina(idPagina, animacion = true) {
       // Si la página tiene desafío, las opciones ya están gestionadas
       // por activarDesafio() — solo mostramos si NO hay desafío
       if (!pagina.desafio) {
-        if (pagina.esFinal) {
+        /*if (pagina.esFinal) {
           setTimeout(() => mostrarFinal(pagina), 800);
         } else {
           mostrarOpciones(pagina.opciones);
-        }
+        }*/
+		mostrarOpciones(pagina.opciones, pagina.esFinal);
       }
     });
 
@@ -552,14 +574,14 @@ function renderizarPagina(idPagina, animacion = true) {
    8. MOSTRAR OPCIONES
    ══════════════════════════════════════════ */
 
-function mostrarOpciones(opciones) {
+function mostrarOpciones(opciones, esfinal) {
   DOM.choicesList.innerHTML = '';
   opciones.forEach((opcion, idx) => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn choice-appear';
     btn.textContent = opcion.texto;
     btn.style.animationDelay = `${idx * 120}ms`;
-    btn.addEventListener('click', () => elegirOpcion(opcion.destino));
+    btn.addEventListener('click', () => elegirOpcion(opcion.destino, esfinal));
     DOM.choicesList.appendChild(btn);
   });
 }
@@ -569,15 +591,19 @@ function mostrarOpciones(opciones) {
    9. ELEGIR OPCIÓN
    ══════════════════════════════════════════ */
 
-function elegirOpcion(destinoId) {
-  // Deshabilitar botones para evitar doble clic
-  DOM.choicesList.querySelectorAll('.choice-btn').forEach(b => {
-    b.disabled = true;
-    b.style.opacity = '0.4';
-  });
+function elegirOpcion(destinoId, esfinal) {
+  if (!esfinal) {
+	  // Deshabilitar botones para evitar doble clic
+	  DOM.choicesList.querySelectorAll('.choice-btn').forEach(b => {
+		b.disabled = true;
+		b.style.opacity = '0.4';
+	  });
 
-  // Pequeño delay para el efecto visual
-  setTimeout(() => renderizarPagina(destinoId, true), 200);
+	  // Pequeño delay para el efecto visual
+	  setTimeout(() => renderizarPagina(destinoId, true), 200);
+  } else {
+	mostrarFinal();  
+  }
 }
 
 
@@ -629,9 +655,9 @@ function activarDesafio(desafio, opciones, esFinal) {
       setTimeout(() => {
         choicesArea.style.display = '';   // restaurar display
         if (esFinal) {
-          mostrarFinal(PAGINAS.find(p => p.opciones === opciones || p.esFinal));
+          mostrarFinal();
         } else {
-          mostrarOpciones(opciones);
+          mostrarOpciones(opciones, esFinal);
         }
       }, 900);
 
@@ -692,10 +718,15 @@ function activarDesafio(desafio, opciones, esFinal) {
    10. PANTALLA DE FINAL
    ══════════════════════════════════════════ */
 
-function mostrarFinal(pagina) {
-  DOM.endTitle.textContent = pagina.titulo;
-  DOM.endText.textContent  = pagina.texto.substring(0, 300) + '...';
+function mostrarFinal() {
+  DOM.endTitle.textContent = "AMAIERA";
+  DOM.endText.textContent  = 'Amaitu duzue abentura hau, baina zer beste abentura biziko dituzte Trikuk eta Bartolinek?';
   mostrarPantalla(DOM.screenEnd);
+  
+  // Mostrar imagen del escenario final
+  const endImage = document.getElementById('end-image');
+  endImage.src = 'amaiera.png'; // Cambiar si quieres otra imagen
+  
   // Borrar guardado al llegar al final
   Estado.borrar();
 }

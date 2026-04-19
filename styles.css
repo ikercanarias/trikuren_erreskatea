@@ -810,9 +810,20 @@ html, body {
   font-size: 13px;
   color: var(--color-text);
   line-height: 1.8;
-  margin-bottom: 28px;
 }
 
+.end-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.end-image {
+  max-width: 500px;
+  /*max-height: 300px;*/
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
 .end-buttons {
   display: flex;
   justify-content: center;
