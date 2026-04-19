@@ -185,7 +185,7 @@ const PAGINAS = [
     opciones: [
       { texto: 'Liburutegira joan', destino: 4 },
       { texto: 'Gaztegunera joan', destino: 9 },
-      { texto: 'Urrezko Iturrira joan', destino: 12 },
+      { texto: 'Bunkerrara joan', destino: 11 },
     ],
   },
 
@@ -206,8 +206,8 @@ const PAGINAS = [
 	escena: 'gaztegune',
 	opciones: [
       { texto: 'Bunkerrera joan.', destino: 11 },
-      { texto: 'Urrearen iturrira joan', destino: 12 },
-      { texto: 'Kobazulo sekretura joan', destino: 13 },
+      { texto: 'Pasabide secretura joan', destino: 10 },
+      { texto: 'Liburutegira joan', destino: 4 },
     ],
   },
 
@@ -222,7 +222,7 @@ const PAGINAS = [
     lore: `Lurraren erraietan, Bartolinek 'E' -aren arrastoa jarraitzen du eta bere sekretua arretaz gordetzen duen gazte talde batekin topo egiten du.`,
     escena: 'pasadizo',
     opciones: [
-      { texto: 'Ahotsei jarraitu.', destino: 13 },
+      { texto: 'Urrearen iturrira joan.', destino: 12 },
       { texto: 'Irteerara igo.', destino: 5 },
       { texto: 'Liburutegira joan', destino: 4 },
     ],
@@ -239,7 +239,7 @@ const PAGINAS = [
     lore: `Alonsotegiko erraietan zulatutako hormigoizko babesleku honek, gerra garaian herria babesteko, historiaz beteriko isiltasuna gordetzen du gaur egun. Garai batean bonbardaketetatik babesteko lekua izan zena, mendiaren iluntasunerantz ezinbestean daraman arrasto baten azken lekuko bihurtzen da orain.`,
     escena: 'bunker',
     opciones: [
-      { texto: 'Kobazulo sekretura joan', destino: 13 },
+      { texto: 'Pasabidera sartzea', destino: 10 },
       { texto: 'Gaztegunera joan', destino: 9 },
       { texto: 'Udaletxeko plazara joan', destino: 3 },
     ],
