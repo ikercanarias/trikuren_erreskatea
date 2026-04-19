@@ -124,7 +124,7 @@ const PAGINAS = [
     },
 	escena: 'puente_nuevo',
     opciones: [
-      { texto: '1. Urrearen Iturrirantz jarraitu', destino: 12 },
+      { texto: '1. Urrezko Iturrirantz jarraitu', destino: 12 },
       { texto: '2. Futbol zelaira joan', destino: 2 },
       { texto: '3. Gaztegunera joan', destino: 9 },
     ],
@@ -148,7 +148,7 @@ const PAGINAS = [
     opciones: [
       { texto: '1. Frontoiko ate sekretu batetik jaistea', destino: 10 },
       { texto: '2. Daniren dendara joan', destino: 7 },
-      { texto: '3. Bunkerrara joan', destino: 11 },
+      { texto: '3. Bunkerrera joan', destino: 11 },
     ],
   },
 
@@ -242,7 +242,7 @@ const PAGINAS = [
     id: 11,
     capitulo: 'X. KAPITULUA - BUNKER',
     titulo: 'BUNKER',
-    texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, bere urratsen oihartzunak durundi egiten zuen beldurraren aurrean ezkutu gisa erabili ziren hormigoizko galerietan. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Leize Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain. Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
+    texto: `Bartolin Alonsotegiko bunkerreko ate astunaren parera iritsi zen. Babesleku hau, Gerra Zibilean harkaitzean zulatua biztanleria zibila bonbardaketetatik babesteko, leku ikaragarria eta iluna izaten jarraitzen zuen. Sartzean, hormigoizko hormetako pasabidean bere pausoen oihartzuna entzuten zen, gerra zegoenean beldurraren aurrean babesteko izan zutenak. Tunelak zeharkatzen ari zela, Bartolinek ulertu zuen zergatik zegoen han: bunkerrak, herriaren oroimena ez ezik, Trikuren desagerpenaren misterioa argitzeko azken pista ere gordetzen zuen.\nGaleria nagusian, hormek oraindik erresistentzia istorioak xuxurlatzen dituztela dirudien lekuan, Bartolinek ez zuen maskota aurkitu, inguruko mapa zahar bat baizik. Paperaren gainean, marka gorri batek bunkerretik irten eta Kobazulo Sekreturantz igotzen zen ibilbide ahaztu bat seinalatzen zuen. Maparen oinean, ikatzez idatzitako mezu batek honela zioen: "Historiak honaino ekarri zaitu, baina amaiera mendia zabaltzen den lekuan duzu zain. Bartolinek mapa gorde eta lupa estutu zuen; bunkerra azken urratsa baino ez zen, kobaren iluntasunari aurre egin eta laguna erreskatatu aurretik."`,
     lore: `Alonsotegiko erraietan zulatutako hormigoizko babesleku honek, gerra garaian herria babesteko, historiaz beteriko isiltasuna gordetzen du gaur egun. Garai batean bonbardaketetatik babesteko lekua izan zena, mendiaren iluntasunerantz ezinbestean daraman arrasto baten azken lekuko bihurtzen da orain.`,
     escena: 'bunker',
     opciones: [
@@ -257,9 +257,9 @@ const PAGINAS = [
   // ──────────────────────────────────────
   {
     id: 12,
-    capitulo: 'XII. KAPITULUA - FUENTE DEL ORO',
-    titulo: 'FUENTE DEL ORO',
-    texto: `Bartolin nekatu samar zegoen Urrearen Iturrirainoko bidea egin ondoren. Eskolatik igotzen den aldapa oso gogorra da. Baina Urrearen Iturrira iritsi zenean, ur kristalinoaren soinuak eta barbakoen usainak energia itzuli zioten. Eskolako haurrei asko gustatzen zitzaien hara joatea. Hala ere, gaur egun dena hutsik zegoen.\nIturritik gertu gominolak, takiak eta beste gozoki batzuk zeuden. Bartolin iturrira hurbildu zen eta arrasto batzuk ikusi zituen basoan barrena, mendiko gunerik ezkutuenerantz. Ez zegoen zalantzarik: Eskolapiokoak hemendik pasatu ziren freskatzeko, behin betiko gordelekura joan aurretik. Detektibeak txapela jantzi, mendiko aire garbia arnastu eta abenturaren azken tarterako prestatu zen.`,
+    capitulo: 'XII. KAPITULUA - URREZKO ITURRIA',
+    titulo: 'URREZKO ITURRIA',
+    texto: `Bartolin nekatu samar zegoen Urrezko Iturrirainoko bidea egin ondoren. Eskolatik igotzen den aldapa oso gogorra da. Baina Urrezko Iturrira iritsi zenean, ur kristalinoaren soinuak eta barbakoen usainak energia itzuli zioten. Eskolako haurrei asko gustatzen zitzaien hara joatea. Hala ere, gaur egun dena hutsik zegoen.\nIturritik gertu gominolak, takiak eta beste gozoki batzuk zeuden. Bartolin iturrira hurbildu zen eta arrasto batzuk ikusi zituen basoan barrena, mendiko gunerik ezkutuenerantz. Ez zegoen zalantzarik: Eskolapiokoak hemendik pasatu ziren freskatzeko, behin betiko gordelekura joan aurretik. Detektibeak txapela jantzi, mendiko aire garbia arnastu eta abenturaren azken tarterako prestatu zen.`,
     lore: `Urrezko Iturria ederra da. Asko gustatzen zaigu eskusio bidez ibiltzea eta inguruan paseatzea.`,
     escena: 'fuente_oro',
     opciones: [
@@ -276,7 +276,7 @@ const PAGINAS = [
     id: 13,
     capitulo: 'XIII. KAPITULUA - EZKUTUKO KOBAZULOA',
     titulo: 'EZKUTUKO KOBAZULOA',
-    texto: `Bartolin oin-puntetan joan zen kobazuloaren sarreratik, bere txapelari eutsiz, nerbioekin eror ez zedin. Bat-batean, aho zabalik geratu zen. Ez zegoen munstrorik, ez bilauik, ez tranpa ilunik. Eskolapioetako haurrak gezurrezko su txiki baten inguruan eserita zeuden (linternekin eta paper zelofanarekin egina), eta erdian Triku zegoen!\nGure maskota ez zen sufritzen ari. Aitzitik, eroso zegoen kuxin baten gainean etzanda, Eskolapiokoek sagar zatitxoak jaten eman eta ipuin bat irakurtzen zioten bitartean. Bartolin ikustean, haurrek jauzi egin zuten eta tomateak bezain gorri jarri ziren.\n— Harrapakinak! — oihu egin zuen Bartolinek, besoak gurutzatuz irribarre pikaroz —. Jakin al daiteke zer egiten duen Alonsotegiko trikurik ospetsuenak kobazulo honetan?\nEskolapioetako haur batek aitortu zuen: — Izan ere... zuen maskota Bizkaia osoko ederrena da! Gure eskolan lehortzen ari den landare bakarra daukagu... Bahiketa sentitzen dugu, asteburuko mailegu bat besterik ez zen!\nBartolinek algara egin zuen, eta burrunba egin zuen kobazulo osoan. — A zer sustoa eman diguzuen! Triku ez da entrenatzen, Triku partekatu egiten da. Baina hurrengoan, ohar misteriotsu baten ordez, bidali WhatsApp bat eta frontoira jolastera gonbidatuko zaituztegu!\nTrikuk, dena ulertuko balu bezala, aharrausi txiki bat egin zuen, eta Eskolapioen umeengana hurbildu zen azken besarkada bat ematera (kontu handiz, noski). Alonsotegiko haurrak, Bartolinen atzetik zetozenak, bat-batean agertu ziren eta, haserretu beharrean, baloi batzuk atera zituzten.\n— Aizue! — esan zuten —. Maskota bat nahi baduzue, gurea bezalako maskota bat egiten lagunduko dizuegu!\nEta horrela, bahiketa misteriotsu bat bezala hasi zena barre-festa batekin eta lagun berriekin amaitu zen. Triku eskolako bere txokora itzuli zen, baina oraingoan bufanda berri batekin "E" hizkiarekin eta lagun berri askorekin. Alonsotegin badakigu, azkenean, pistarik onenak beti leku berera eramaten duela: adiskidetasuna!`,
+    texto: `Bartolin oin-puntetan joan zen kobazuloaren sarreratik, bere txapelari eutsiz, nerbioekin eror ez zedin. Bat-batean, aho zabalik geratu zen. Ez zegoen munstrorik, ez bilauik, ez tranpa ilunik. Eskolapioetako haurrak gezurrezko su txiki baten inguruan eserita zeuden (linternekin eta paper zelofanarekin egina), eta erdian Triku zegoen!\nGure maskota ez zen sufritzen ari. Aitzitik, eroso zegoen kuxin baten gainean etzanda, Eskolapiokoek sagar zatitxoak jaten eman eta ipuin bat irakurtzen zioten bitartean. Bartolin ikustean, haurrek jauzi egin zuten eta tomateak bezain gorri jarri ziren.\n— Harrapatuak! — oihu egin zuen Bartolinek, besoak gurutzatuz irribarre pikaroz —. Jakin al daiteke zer egiten duen Alonsotegiko trikurik ospetsuenak kobazulo honetan?\nEskolapioetako haur batek aitortu zuen: — Izan ere... zuen maskota Bizkaia osoko ederrena da! Gure eskolan lehortzen ari den landare bakarra daukagu... Bahiketa sentitzen dugu, asteburuko mailegu bat besterik ez zen!\nBartolinek algara egin zuen, eta burrunba egin zuen kobazulo osoan. — A zer sustoa eman diguzuen! Triku ez da bahitzen, Triku partekatu egiten da. Baina hurrengoan, ohar misteriotsu baten ordez, bidali WhatsApp bat eta frontoira jolastera gonbidatuko zaituztegu!\nTrikuk, dena ulertuko balu bezala, aharrausi txiki bat egin zuen, eta Eskolapioen umeengana hurbildu zen azken besarkada bat ematera (kontu handiz, noski). Alonsotegiko haurrak, Bartolinen atzetik zetozenak, bat-batean agertu ziren eta, haserretu beharrean, baloi batzuk atera zituzten.\n— Aizue! — esan zuten —. Maskota bat nahi baduzue, gurea bezalako maskota bat egiten lagunduko dizuegu!\nEta horrela, bahiketa misteriotsu bat bezala hasi zena barre-festa batekin eta lagun berriekin amaitu zen. Triku eskolako bere txokora itzuli zen, baina oraingoan bufanda berri batekin "E" hizkiarekin eta lagun berri askorekin. Alonsotegin badakigu, azkenean, pistarik onenak beti leku berera eramaten duela: adiskidetasuna!`,
     lore: `ZORIONAK! Triku aurkitu dugu!`,
     escena: 'cueva_secreta',
     esFinal: true,
@@ -939,7 +939,7 @@ DOM.chapterBackdrop.addEventListener('click', cerrarMenuCapitulos);
 
 // Botón reiniciar (HUD)
 DOM.btnRestart.addEventListener('click', () => {
-  if (confirm('¿Deseas reiniciar la aventura desde el principio?')) {
+  if (confirm('Hasieratik hasi nahi duzu abentura?')) {
     Estado.borrar();
     mostrarPantalla(DOM.screenIntro);
   }
@@ -963,7 +963,7 @@ document.addEventListener('keydown', (e) => {
       if (!DOM.chapterMenu.classList.contains('hidden')) {
         cerrarMenuCapitulos();
       } else {
-        if (confirm('¿Volver al menú principal?')) {
+        if (confirm('Menu nagusira itzuli nahi duzu?')) {
           mostrarPantalla(DOM.screenIntro);
         }
       }
@@ -993,7 +993,7 @@ function initMusic() {
   }
   
   bgMusic.volume = 0.3;
-  bgMusic.play().catch(err => console.log('No se pudo reproducir:', err));
+  bgMusic.play().catch(err => console.log('Ezin izan da musika erreproduzitu:', err));
 }
 
 // Activar música con el primer clic del usuario
