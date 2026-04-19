@@ -277,7 +277,7 @@ const PAGINAS = [
     capitulo: 'XIII. KAPITULUA - EZKUTUKO KOBAZULOA',
     titulo: 'EZKUTUKO KOBAZULOA',
     texto: `Bartolin oin-puntetan joan zen kobazuloaren sarreratik, bere txapelari eutsiz, nerbioekin eror ez zedin. Bat-batean, aho zabalik geratu zen. Ez zegoen munstrorik, ez bilauik, ez tranpa ilunik. Eskolapioetako haurrak gezurrezko su txiki baten inguruan eserita zeuden (linternekin eta paper zelofanarekin egina), eta erdian Triku zegoen!\nGure maskota ez zen sufritzen ari. Aitzitik, eroso zegoen kuxin baten gainean etzanda, Eskolapiokoek sagar zatitxoak jaten eman eta ipuin bat irakurtzen zioten bitartean. Bartolin ikustean, haurrek jauzi egin zuten eta tomateak bezain gorri jarri ziren.\n— Harrapakinak! — oihu egin zuen Bartolinek, besoak gurutzatuz irribarre pikaroz —. Jakin al daiteke zer egiten duen Alonsotegiko trikurik ospetsuenak kobazulo honetan?\nEskolapioetako haur batek aitortu zuen: — Izan ere... zuen maskota Bizkaia osoko ederrena da! Gure eskolan lehortzen ari den landare bakarra daukagu... Bahiketa sentitzen dugu, asteburuko mailegu bat besterik ez zen!\nBartolinek algara egin zuen, eta burrunba egin zuen kobazulo osoan. — A zer sustoa eman diguzuen! Triku ez da entrenatzen, Triku partekatu egiten da. Baina hurrengoan, ohar misteriotsu baten ordez, bidali WhatsApp bat eta frontoira jolastera gonbidatuko zaituztegu!\nTrikuk, dena ulertuko balu bezala, aharrausi txiki bat egin zuen, eta Eskolapioen umeengana hurbildu zen azken besarkada bat ematera (kontu handiz, noski). Alonsotegiko haurrak, Bartolinen atzetik zetozenak, bat-batean agertu ziren eta, haserretu beharrean, baloi batzuk atera zituzten.\n— Aizue! — esan zuten —. Maskota bat nahi baduzue, gurea bezalako maskota bat egiten lagunduko dizuegu!\nEta horrela, bahiketa misteriotsu bat bezala hasi zena barre-festa batekin eta lagun berriekin amaitu zen. Triku eskolako bere txokora itzuli zen, baina oraingoan bufanda berri batekin "E" hizkiarekin eta lagun berri askorekin. Alonsotegin badakigu, azkenean, pistarik onenak beti leku berera eramaten duela: adiskidetasuna!`,
-    lore: `ZORIONAK!`,
+    lore: `ZORIONAK! Triku aurkitu dugu!`,
     escena: 'cueva_secreta',
     esFinal: true,
     opciones: [{ texto: 'AMAITU', destino: 13 }],
@@ -401,6 +401,12 @@ let DOM = {
   challengeErrDiv:  document.getElementById('challenge-feedback-error'),
   challengeErrMsg:  document.getElementById('challenge-error-msg'),
   challengeOkDiv:   document.getElementById('challenge-feedback-ok'),
+  
+  // ── Menú de capítulos ──
+  chapterMenu:      document.getElementById('chapter-menu'),
+  chapterMenuList:  document.getElementById('chapter-menu-list'),
+  btnMenuClose:     document.getElementById('btn-menu-close'),
+  chapterBackdrop:  document.getElementById('chapter-menu-backdrop'),
 };
 
 
@@ -720,7 +726,7 @@ function activarDesafio(desafio, opciones, esFinal) {
 
 function mostrarFinal() {
   DOM.endTitle.textContent = "AMAIERA";
-  DOM.endText.textContent  = 'Amaitu duzue abentura hau, baina zer beste abentura biziko dituzte Trikuk eta Bartolinek?';
+  DOM.endText.textContent  = 'Amaitu dugu gure abentura, baina zein izango da Triku eta Bartolinen hurrengo abentura?';
   mostrarPantalla(DOM.screenEnd);
   
   // Mostrar imagen del escenario final
@@ -810,6 +816,89 @@ function guardarPartida() {
 
 
 /* ══════════════════════════════════════════
+   13b. MENÚ DE CAPÍTULOS
+   ══════════════════════════════════════════ */
+
+/**
+ * Construye la lista de capítulos en el panel lateral.
+ * Se llama una sola vez en la inicialización.
+ */
+function construirMenuCapitulos() {
+  DOM.chapterMenuList.innerHTML = '';
+
+  PAGINAS.forEach((pagina, idx) => {
+    const li = document.createElement('li');
+    li.className = 'chapter-menu-item';
+    li.dataset.id = pagina.id;
+
+    // Número del capítulo (posición en el array, 1-based)
+    const numEl = document.createElement('span');
+    numEl.className = 'chapter-menu-num';
+    numEl.textContent = String(idx + 1).padStart(2, '0');
+
+    // Bloque de textos
+    const textsEl = document.createElement('div');
+    textsEl.className = 'chapter-menu-texts';
+
+    const capEl = document.createElement('span');
+    capEl.className = 'chapter-menu-cap';
+    capEl.textContent = pagina.capitulo || `${idx + 1}. KAPITULUA`;
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'chapter-menu-name';
+    nameEl.textContent = pagina.titulo || '';
+
+    textsEl.appendChild(capEl);
+    textsEl.appendChild(nameEl);
+
+    li.appendChild(numEl);
+    li.appendChild(textsEl);
+
+    // Click: navegar al capítulo y cerrar menú
+    li.addEventListener('click', () => {
+      cerrarMenuCapitulos();
+      renderizarPagina(pagina.id, true);
+    });
+
+    DOM.chapterMenuList.appendChild(li);
+  });
+}
+
+/** Abre el panel de capítulos y marca el ítem activo. */
+function abrirMenuCapitulos() {
+  // Marcar el ítem de la página actual
+  DOM.chapterMenuList.querySelectorAll('.chapter-menu-item').forEach(item => {
+    const esActual = Number(item.dataset.id) === Estado.paginaActual;
+    item.classList.toggle('current', esActual);
+    if (esActual) {
+      // Hacer scroll hacia el ítem activo (sin animación brusca)
+      setTimeout(() => item.scrollIntoView({ block: 'nearest', behavior: 'smooth' }), 80);
+    }
+  });
+
+  DOM.chapterMenu.classList.remove('hidden');
+  DOM.btnMenu.classList.add('menu-open');
+  // Foco en el botón de cierre para accesibilidad
+  setTimeout(() => DOM.btnMenuClose.focus(), 50);
+}
+
+/** Cierra el panel de capítulos. */
+function cerrarMenuCapitulos() {
+  DOM.chapterMenu.classList.add('hidden');
+  DOM.btnMenu.classList.remove('menu-open');
+  DOM.btnMenu.focus();
+}
+
+/** Alterna el estado del panel. */
+function toggleMenuCapitulos() {
+  if (DOM.chapterMenu.classList.contains('hidden')) {
+    abrirMenuCapitulos();
+  } else {
+    cerrarMenuCapitulos();
+  }
+}
+
+/* ══════════════════════════════════════════
    14. EVENTOS
    ══════════════════════════════════════════ */
 
@@ -834,6 +923,20 @@ DOM.btnNewGame?.addEventListener('click', () => {
 // Botón guardar (HUD)
 DOM.btnSave.addEventListener('click', guardarPartida);
 
+// Botón menú de capítulos (HUD)
+DOM.btnMenu.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleMenuCapitulos();
+});
+
+// Cerrar con botón ✕ del panel
+DOM.btnMenuClose.addEventListener('click', cerrarMenuCapitulos);
+
+// Cerrar al pulsar el backdrop oscuro
+DOM.chapterBackdrop.addEventListener('click', cerrarMenuCapitulos);
+
+// Cerrar con ESC también cierra el menú si está abierto
+
 // Botón reiniciar (HUD)
 DOM.btnRestart.addEventListener('click', () => {
   if (confirm('¿Deseas reiniciar la aventura desde el principio?')) {
@@ -854,11 +957,15 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 's' || e.key === 'S') {
     if (DOM.screenBook.classList.contains('active')) guardarPartida();
   }
-  // ESC = menú / intro (si estamos en el libro)
+  // ESC = cerrar menú de capítulos si está abierto; si no, preguntar por menú principal
   if (e.key === 'Escape') {
     if (DOM.screenBook.classList.contains('active')) {
-      if (confirm('¿Volver al menú principal?')) {
-        mostrarPantalla(DOM.screenIntro);
+      if (!DOM.chapterMenu.classList.contains('hidden')) {
+        cerrarMenuCapitulos();
+      } else {
+        if (confirm('¿Volver al menú principal?')) {
+          mostrarPantalla(DOM.screenIntro);
+        }
       }
     }
   }
@@ -897,6 +1004,9 @@ document.addEventListener('click', initMusic, { once: true });
   // Iniciar starfield
   iniciarStarfield();
   
+  // Construir lista de capítulos en el menú lateral (una sola vez)
+  construirMenuCapitulos();
+
   // Comprobar si hay partida guardada
   const haySave = Estado.cargar();
   if (haySave && Estado.paginaActual > 1) {

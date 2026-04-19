@@ -88,6 +88,24 @@
       </div>
     </header>
 
+	 <!-- ── Menú de capítulos (desplegable desde ☰) ── -->
+    <div id="chapter-menu" class="chapter-menu hidden" role="dialog" aria-label="Kapituluak">
+      <div class="chapter-menu-inner">
+
+        <div class="chapter-menu-header">
+          <span class="chapter-menu-title">✦ KAPITULUAK ✦</span>
+          <button id="btn-menu-close" class="btn-hud chapter-menu-close" title="Itxi">✕</button>
+        </div>
+
+        <ul id="chapter-menu-list" class="chapter-menu-list">
+          <!-- Generada por JS a partir de PAGINAS -->
+        </ul>
+
+      </div>
+      <!-- Fondo oscuro: click fuera cierra -->
+      <div class="chapter-menu-backdrop" id="chapter-menu-backdrop"></div>
+    </div>
+	
     <!-- El Libro -->
     <main class="book-container" id="book-container">
 
