@@ -30,7 +30,7 @@ const PAGINAS = [
     id: 1,
     capitulo: 'I. KAPITULUA - TRIKU DESAGERTU DA',
     titulo: 'TRIKU DESAGERTU DA',
-    texto: `Goiz lasaia zen Alonsotegiko eskolan. Haurrak beren geletan zeuden irratia entzuten, eta bat-batean oihu batzuk entzun zituzten patiotik zetozela:\n\n— TRIKU DESAGERTU DA!!\n\nDenak isilik geratu ziren. Xabi Trikuren bila joan zen eskola osoan zehar, baina ez zuen aurkitu. Triku, gure eskolako maskota, ez zegoen bere ohiko txokoan.\n\nZuzendaritzatik, Irantzuk Bartolini deitu zion, Alonsotegiko detektibeari. Minutu batzuk barru, bere txapela eta bere irribarre bihurria jantzita agertu zen. Arrastoak jaso eta susmagarriak izan zitezkeenak galdekatu ondoren, oso seguru esan zuen:\n\n— Lasai, ni arduratuko naiz!\n\nBartolinek ohar bat aurkitu zuen gimnasioko zoruan, honela zioena:\n\n"Triku berriz ikusi nahi baduzue, jarraitu pistei. — E. Sinatua"\n\nBartolinek hasperen egin zuen eta bere buruari galdetu zion ea nortzuk izan zitezkeen "E" eta zergatik bahitu zuen Triku, eta orduan esan zuen:\n\n— Abentura ona izango da hau...\n\n`,
+    texto: `Goiz lasaia zen Alonsotegiko eskolan. Haurrak beren geletan zeuden irratia entzuten, eta bat-batean oihu batzuk entzun zituzten patiotik zetozela:\n\n— TRIKU DESAGERTU DA!!\n\nDenak isilik geratu ziren. Xabi Trikuren bila joan zen eskola osoan zehar, baina ez zuen aurkitu. Triku, gure eskolako maskota, ez zegoen bere ohiko txokoan.\n\nZuzendaritzatik, Irantzuk Bartolini deitu zion, Alonsotegiko detektibeari. Minutu batzuk barru, bere txapela eta bere irribarre bihurria jantzita agertu zen. Arrastoak jaso eta susmagarriak izan zitezkeenak galdetu ondoren, oso seguru esan zuen:\n\n— Lasai, ni arduratuko naiz!\n\nBartolinek ohar bat aurkitu zuen gimnasioko zoruan, honela zioena:\n\n"Triku berriz ikusi nahi baduzue, jarraitu pistei. — E. Sinatua"\n\nBartolinek hasperen egin zuen eta bere buruari galdetu zion ea nortzuk izan zitezkeen "E" eta zergatik bahitu zuen Triku, eta orduan esan zuen:\n\n— Abentura ona izango da hau...\n\n`,
     lore: `Trikuren desagerpenak Alonsotegi astindu du, eta orain Bartolinen trebetasuna eta "E" misteriotsuaren pistak dira maskota berreskuratzeko gako bakarra.`,
     escena: 'inicio',
     opciones: [
@@ -50,7 +50,7 @@ const PAGINAS = [
     texto: `Bartolin Basteitara iritsi zenean, zelaia isilik zegoen. Landako tabernan galdetu zuen ea norbaitek zerbait arraroa ikusi zuen, baina inork ez zuen ezer ikusi. Harmailetan begiratu zuen eta ez zuen ezer aurkitu. Aldagelak arakatu zituen eta ez zuen arrastorik aurkitu. Baina bat-batean, zerbaitek atentzioa eman zion berdegunean. Bartolinen ama zelai erdian zegoen baloi baten ondoan.\n\nBartolin! Bartolin! – oihukatu zuen amak. Eskerrak iritsi zaren. Basteitan paseatzen ari nintzen eta futbol zelaiaren erdian baloi bat zegoela ikusi dut. Eta harrapatzera hurbildu naizenean, ohar bat zegoen baloiaren azpian.`,
     lore: `...`,
     desafio: {
-      galdera: `Zenbat pertsona daude futboleko 2 partida aldi berean jokatzen diren jokalekuan?`,
+      galdera: `Zenbat pertsona daude bi futbol zazpi partida aldi berean jokatzen ari diren zelai batean?`,
       erantzuna: '30',
       okerMezua: `Hori ez da... Saiatu berriro. Pista: Zelaiaren barruan jokalariak eta beste norbait daude.`,
     },
@@ -79,8 +79,8 @@ const PAGINAS = [
 	escena: 'ayuntamiento',
     opciones: [
       { texto: 'Daniren dendara joan', destino: 7 },
-      { texto: 'Joan Eroskira', destino: 8 },
-      { texto: 'Joan Gaztegunera', destino: 9 },
+      { texto: 'Eroskira joan', destino: 8 },
+      { texto: 'Gaztegunera joan', destino: 9 },
     ],
   },
 
@@ -91,7 +91,7 @@ const PAGINAS = [
     id: 4,
     capitulo: 'IV. KAPITULUA - LIBURUTEGIA',
     titulo: 'LIBURUTEGIA',
-    texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Xandals batzuk zeramatzaten, "E" letradun ezkutu batekin. Bartolinek liburua ireki zuenean, barruan mezu bat zegoela ikusi zuen.`,
+    texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Txandalez jantzita zeuden, "E" letradun ezkutu batekin. Bartolinek liburua ireki zuenean, barruan mezu bat zegoela ikusi zuen.`,
     lore: `...`,
     desafio: {
       galdera: `Denek ezagutzen dute Udaletxeko plaza, baina ezagutzen al duzue plaza horren benetako izena?.`,
@@ -102,7 +102,7 @@ const PAGINAS = [
     opciones: [
       { texto: 'Pasabidera sartzea', destino: 10 },
       { texto: 'Bunkerrera joan', destino: 11 },
-      { texto: 'Udaletxeko plazara irtetea', destino: 3 },
+      { texto: 'Udaletxeko plazara joan', destino: 3 },
     ],
   },
 
@@ -123,8 +123,8 @@ const PAGINAS = [
 	escena: 'puente_nuevo',
     opciones: [
       { texto: 'Urrearen Iturrirantz jarraitu', destino: 12 },
-      { texto: 'Futbol zelaira itzuli', destino: 2 },
-      { texto: 'Joan Gaztegunera', destino: 9 },
+      { texto: 'Futbol zelaira joan', destino: 2 },
+      { texto: 'Gaztegunera joan', destino: 9 },
     ],
   },
 
@@ -139,7 +139,7 @@ const PAGINAS = [
     lore: `"Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu."`,
     escena: 'fronton',
     opciones: [
-      { texto: 'Pilotalekuko ate sekretu batetik jaistea', destino: 6 },
+      { texto: 'Frontoiko ate sekretu batetik jaistea', destino: 6 },
       { texto: 'Daniren dendara joan', destino: 7 },
       { texto: 'Bunkerrara joan', destino: 11 },
     ],
@@ -155,14 +155,14 @@ const PAGINAS = [
     texto: `Bartolin Daniren dendan sartu zenean, gominolak eta gozokiak usaintzen zituen denak. Dani, salmahaiaren atzean, Takis pakete batzuk ordenatzen ari zen, kezka-aurpegiz.\n\n— Aupa, Bartolin! — oihu egin zuen Danik —. Eskerrak agertzen zaren. Duela gutxi gazte batzuk sartu dira txandala jantzita, eta barre egiten zuten etengabe. Txikle bat ere ez dute erosi, baina kristalezko poto hau koloretako gozokiz beteta utzi didate eta eskolako ikasleentzat "opari" bat zela esan dute.\n\nBartolinek potoa aztertu zuen. Ezin zen ireki, zenbakizko giltzarrapo bat zuelako. Gozokiak geruza oso zehatzetan jarrita zeudela ikusi zuen. Ohar bat zegoen kristalezko potoari itsatsita."`,
     lore: `...`,
     desafio: {
-      galdera: `Jarraibide batzuk zeuden: gorria = 1, horia = 2, urdina = 3.<br>Bartolinek gozokiek sekuentzia bat osatzen zutela ikusi zuen: gorria, urdina, berdea eta morea.<br>Zer kode sartu beharko da giltzarrapoan irekitzeko?`,
+      galdera: `Jarraibide batzuk zeuden: gorria = 1, horia = 2, urdina = 3.<br>Bartolinek gozokiek sekuentzia bat osatzen zutela ikusi zuen: gorria, urdina, laranja eta morea.<br>Zer kode sartu beharko da giltzarrapoan irekitzeko?`,
       erantzuna: '1334',
       okerMezua: `Hori ez da... Saiatu berriro.`,
     },
 	escena: 'tienda_dani',
     opciones: [
-      { texto: 'Joan Gaztegunera', destino: 9 },
-      { texto: 'Joan Eroskira', destino: 8 },
+      { texto: 'Gaztegunera joan', destino: 9 },
+      { texto: 'Eroskira joan', destino: 8 },
       { texto: 'Zubi berrira joan', destino: 5 },
     ],
   },
@@ -174,7 +174,7 @@ const PAGINAS = [
     id: 8,
     capitulo: 'VIII. KAPITULUA - EROSKI',
     titulo: 'EROSKI',
-    texto: `Eroskin sartu zenean, aire girotuak Bartolin freskatu zuen. Supermerkatuan gauza asko zeuden: kafea, galletak, jogurtak, frutak, barazkiak, etab. Denak oso itxura ona zuen. Bartolinek supermerkatua zeharkatu zuen harategira iritsi arte. Han zegoen Charles harategian hanburgesak prestatzen.\n\n— Bartolin, pozten naiz zu ikusteaz! — esan zuen bazter batean zegoen erosketa-gurdi bat seinalatuz —. Jertsean "E" bateko ezkutua duten haur batzuek kutxa hutsez betetako orga utzi dute, baina esan didate Alonsotegiko detektibe azkarrenak bakarrik jakingo lukeela falta den "produktua" aurkitzen.\n\nBartolin gurdira hurbildu zen. Esne kaxen eta galleta paketeen artean, kartazal bat aurkitu zuen, barra-kode bitxi baten marrazkia zuena.`,
+    texto: `Eroskin sartu zenean, aire girotuak Bartolin freskatu zuen. Supermerkatuan gauza asko zeuden: kafea, galletak, jogurtak, frutak, barazkiak, etab. Denak oso itxura ona zuen. Bartolinek supermerkatua zeharkatu zuen harategira iritsi arte. Han zegoen Carlos harategian hanburgesak prestatzen.\n\n— Bartolin, pozten naiz zu ikusteaz! — esan zuen bazter batean zegoen erosketa-gurdi bat seinalatuz —. Jertsean "E" bateko ezkutua duten haur batzuek kutxa hutsez betetako orga utzi dute, baina esan didate Alonsotegiko detektibe azkarrenak bakarrik jakingo lukeela falta den "produktua" aurkitzen.\n\nBartolin orgara hurbildu zen. Esne kaxen eta galleta paketeen artean, kartazal bat aurkitu zuen, barra-kode bitxi baten marrazkia zuena.`,
     lore: `...`,
 	desafio: {
       galdera: `"Ez naiz bizi, baina hitzak gordetzen ditut.<br>Ez dut ahoa, baina istorioak kontatzen ditut.<br>Isilik nago beti, baina asko irakasten dut.<br>Zer naiz?`,
@@ -184,8 +184,8 @@ const PAGINAS = [
     escena: 'eroski',
     opciones: [
       { texto: 'Liburutegira joan', destino: 4 },
-      { texto: 'Joan gaztegunera', destino: 9 },
-      { texto: 'Joan Urrezko Iturrira', destino: 12 },
+      { texto: 'Gaztegunera joan', destino: 9 },
+      { texto: 'Urrezko Iturrira joan', destino: 12 },
     ],
   },
 
@@ -218,13 +218,13 @@ const PAGINAS = [
     id: 10,
     capitulo: 'X. KAPITULUA - PASABIDE SECRETUA',
     titulo: 'PASABIDE SECRETUA',
-    texto: `Hezetasunak Bartolinen aurpegia jo zuen eskailera estuan behera zihoala. Pasabideko hormak harri zaharrez eginak zeuden, eta entzuten zen soinu bakarra uraren urruneko jarioa zen, lurretik iragazten zena. Bere mugikorreko linterna piztu eta argia dantzan hasi zen itzalen gainean, zoru hareatsuan arrasto freskoak erakutsiz. Bat-batean, haur-ahots batzuk entzun ziren tunelaren atzealdean, hormen oihartzunak anplifikaturik:\n— Azkar, ez gaitzatela harrapatu! — xuxurlatzen zuen norbaitek —. Bartolinek kobazulora iritsi aurretik aurkitzen bagaitu, planak porrot egingo du!\nBartolin paretari itsatsi eta hanka puntetan aurreratu zen. Izkina batetik begira, haur batzuk barrez entzun zituen. Mutikoak ziren! Bizkarrean argi eta garbi irakur zitekeen: "Eskolapioak".\n"E" koak Escolapios ikastetxeko ikasleak ziren! Urduri ziruditen eta manta baten barruan mugitzen zen zerbait zeramaten. Hala ere, Bartolinen aurre-aurrean, pasabidea bi norabidetan banatzen zen: eguneko argirantz igotzen zen arrapala bat eta tunel ilun bat, ahotsen arrastoari jarraituz Alonsotegirantz hondoratzen zena."`,
+    texto: `Hezetasunak Bartolinen aurpegia jo zuen eskailera estuan behera zihoala. Pasabideko hormak harri zaharrez eginak zeuden, eta entzuten zen soinu bakarra uraren urruneko jarioa zen, lurretik iragazten zena. Bere mugikorreko linterna piztu eta argia dantzan hasi zen itzalen gainean, zoru hareatsuan arrasto freskoak erakutsiz. Bat-batean, haur-ahots batzuk entzun ziren tunelaren atzealdean, hormen oihartzunak anplifikaturik:\n— Azkar, ez gaitzatela harrapatu! — xuxurlatzen zuen norbaitek —. Bartolinek kobazulora iritsi aurretik aurkitzen bagaitu, akabo gure plana!\nBartolin paretari itsatsi eta hanka puntetan aurreratu zen. Izkina batetik begira, haur batzuk barrez entzun zituen. Mutikoak ziren! Bizkarrean argi eta garbi irakur zitekeen: "Eskolapioak".\n"E" koak Escolapios ikastetxeko ikasleak ziren! Urduri ziruditen eta manta baten barruan mugitzen zen zerbait zeramaten. Hala ere, Bartolinen aurre-aurrean, pasabidea bi norabidetan banatzen zen: eguneko argirantz igotzen zen arrapala bat eta tunel ilun bat, ahotsen arrastoari jarraituz Alonsotegirantz hondoratzen zena."`,
     lore: `Lurraren erraietan, Bartolinek 'E' -aren arrastoa jarraitzen du eta bere sekretua arretaz gordetzen duen gazte talde batekin topo egiten du.`,
     escena: 'pasadizo',
     opciones: [
       { texto: 'Ahotsei jarraitu.', destino: 13 },
       { texto: 'Irteerara igo.', destino: 5 },
-      { texto: 'Liburutegira itzuli.', destino: 4 },
+      { texto: 'Liburutegira joan', destino: 4 },
     ],
   },
 
@@ -240,7 +240,7 @@ const PAGINAS = [
     escena: 'bunker',
     opciones: [
       { texto: 'Kobazulo sekretura joan', destino: 13 },
-      { texto: 'Joan Gaztegunera', destino: 9 },
+      { texto: 'Gaztegunera joan', destino: 9 },
       { texto: 'Udaletxeko plazara joan', destino: 3 },
     ],
   },
@@ -258,7 +258,7 @@ const PAGINAS = [
     opciones: [
       { texto: 'Kobazulo sekretura joan', destino: 13 },
       { texto: 'Zubi berrira joan', destino: 5 },
-      { texto: 'Joan Eroskira', destino: 8 },
+      { texto: 'Eroskira joan', destino: 8 },
     ],
   },
 
