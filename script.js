@@ -550,6 +550,9 @@ function renderizarPagina(idPagina, animacion = true) {
 
   // ── Opciones (limpiar primero) ──
   DOM.choicesList.innerHTML = '';
+  
+  const choicesArea = document.getElementById('choices-area');
+  choicesArea.style.display = 'block';  // Asegurar que esté visible
 
   // ── Animar entrada de páginas ──
   setTimeout(() => {
@@ -659,7 +662,7 @@ function activarDesafio(desafio, opciones, esFinal) {
 
       // Esperar un momento y luego mostrar las opciones
       setTimeout(() => {
-        choicesArea.style.display = '';   // restaurar display
+        choicesArea.style.display = 'block';   // restaurar display
         if (esFinal) {
           mostrarFinal();
         } else {
