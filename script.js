@@ -118,7 +118,7 @@ const PAGINAS = [
     texto: `Ibaiko ura indar handiz jaisten zen. Euri asko egin zuen, eta urak harkaitzen kontra jotzen zuen eta enborrak eta adarrak herrestan eramaten zituen. Pasealekuan ez zegoen inor.\n\nBartolin Loibeko parkera jaitsi zen. Zabu, txirrista eta jarleku guztiak arakatu zituen, baina ez zuen arrastorik aurkitu. Mutil bat zebilen txakurra paseatzen, eta galdetu zion ea zerbait arraroa ikusi zuen, baina mutilak ezetz esan zion.\n\nBat-batean, Bartolinek zubira begiratu zuen eta txandalez jantzitako haur talde bat ikusi zuen, denak kolore berekoak. Zubia azkar zeharkatu eta Koskojalesera zihoazen korrika. Bartolin haiengana korrika zihoala, zerbaitek atentzioa eman zion. Zubi berriaren erdian ohar bat zegoen.`,
     lore: `...`,
     desafio: {
-      galdera: `Espioiaren alfabetoan, letra bakoitza hiru posizio aurrerantz mugitzen da (A = D, B = E, C = F...). Zein hitz ezkutatzen da 'LOOFX' kodearen atzean?`,
+      galdera: `Espioiaren alfabetoan, letra bakoitza hiru posizio aurrerantz mugitzen da (A = D, B = E, C = F...).<br>Zein hitz ezkutatzen da 'LOOFX' kodearen atzean?`,
       erantzuna: 'Orria',
       okerMezua: `Hori ez da... Saiatu berriro.`,
     },
@@ -206,7 +206,7 @@ const PAGINAS = [
     texto: `Gaztegunean gazte batzuk ping-pongean jokatzen ari ziren, beste batzuk Play jokoan ari ziren eta beste batzuk Larrobeltz eta Larramendiren kromoak aldatzen ari ziren. Giroa alaia zen, baina zerbait ez zetorren bat. Neska-mutil batzuk Gazteguneko gune batean pilatu ziren.\n\nBartolin hurbildu zenean, kaxa handi itxi bat ikusi zuen. Julene oso kezkatuta zegoen, ez zekielako zergatik utzi zuten kutxa hori hor. Julenek Bartolin ikusi zuenean, esan zion:\n\n— Bartolin, begira honi! Kanpoko neska-mutil batzuek kutxa hau utzi eta korrika alde egin dute. Ez nituen ezagutzen, baina denak kirol-arropaz jantzita zeuden. Gainera, dena lokatzezko oinatzez beteta utzi dute, Urrearen iturritik zetozela esaten zuten. Kutxak ohar bat eta teklatu bat zeukan zenbakiekin.`,
     lore: `...`,
     desafio: {
-      galdera: `Zenbat dakizu Alonsotegiri buruz?<br><br>Nola du izena Alonsotegitik igarotzen den ibaiak? Bere letrak kontatzen badituzu, lehen zenbakia izango duzu.<br><br>Nola du izena eskolara igotzen den kaleak? Kontatu bere letrak eta bigarren zenbakia izango duzu.<br><br>Zein da Alonsotegiko mendirik garaiena? Kontatu bere letrak eta bigarren zenbakia izango duzu.`,
+      galdera: `Zenbat dakizu Alonsotegiri buruz?<br>- Nola du izena Alonsotegitik igarotzen den ibaiak? Bere letrak kontatzen badituzu, lehen zenbakia izango duzu.<br>- Nola du izena eskolara igotzen den kaleak? Kontatu bere letrak eta bigarren zenbakia izango duzu.<br>- Zein da Alonsotegiko mendirik garaiena? Kontatu bere letrak eta bigarren zenbakia izango duzu.`,
       erantzuna: '7611',
       okerMezua: `Hori ez da... Saiatu berriro.`,
     },
