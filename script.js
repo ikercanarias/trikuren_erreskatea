@@ -52,7 +52,7 @@ const PAGINAS = [
     texto: `Bartolin Basteitara iritsi zenean, zelaia isilik zegoen. Landako tabernan galdetu zuen ea norbaitek zerbait arraroa ikusi zuen, baina inork ez zuen ezer ikusi. Harmailetan begiratu zuen eta ez zuen ezer aurkitu. Aldagelak arakatu zituen eta ez zuen arrastorik aurkitu. Baina bat-batean, zerbaitek atentzioa eman zion berdegunean. Bartolinen ama zelai erdian zegoen baloi baten ondoan.\n\nBartolin! Bartolin! – oihukatu zuen amak. Eskerrak iritsi zaren. Basteitan paseatzen ari nintzen eta futbol zelaiaren erdian baloi bat zegoela ikusi dut. Eta harrapatzera hurbildu naizenean, ohar bat zegoen baloiaren azpian.`,
     lore: `...`,
     desafio: {
-      galdera: `Zenbat pertsona daude bi futbol zazpi partida aldi berean jokatzen ari diren zelai batean?`,
+      galdera: `Futbol zelai batean, bi futbol zazpi partida aldi berean jokatzen ari dira. Zenbat pertsona daude zelaian?`,
       erantzuna: '30',
       okerMezua: `Hori ez da... Saiatu berriro. Pista: Zelaiaren barruan jokalariak eta beste norbait daude.`,
     },
@@ -140,7 +140,7 @@ const PAGINAS = [
     texto: `Frontoian zarata handia entzuten zen eta jendea oihuka eta animoka. Larrobeltzeko saskibaloi taldea Escolapiosen aurkako partida jokatzen ari zen. Partida zirraragarria zen. Larrobeltz 2 puntu galtzen ari zen eta 5 segundo bakarrik geratzen ziren. Azken segundoan Larrobeltzeko jokalari batek jaurtiketa urrun bat jaurti eta hirukoa sartu zuen. Azkenean, Larrobeltzek 61-60 irabazi zuen. Zaleak oso pozik zeuden, denak oihuka eta txaloka.\n\nBaina bat-batean mundu guztia gelditu egin zen Bartolin frontoira sartzen ikusi zuenean. Une horretan, Larrobeltzeko entrenatzailea Bartolinengana hurbildu zen eta saskietako batean itsatsita aurkitu zuen ohar bat eman zion.`,
     lore: `Abenturarekin jarraitu nahi baduzu, saski bat sartu beharko duzu.`,
     desafio: {
-      galdera: `Saskia sartu duzue??`,
+      galdera: `Saskia sartu duzue?`,
       erantzuna: 'Bai',
       okerMezua: `Saiatu berriro.`,
     },
@@ -229,7 +229,7 @@ const PAGINAS = [
     lore: `Lurraren erraietan, Bartolinek 'E' -aren arrastoa jarraitzen du eta bere sekretua arretaz gordetzen duen gazte talde batekin topo egiten du.`,
     escena: 'pasadizo',
     opciones: [
-      { texto: '1. Bunkerrara joan', destino: 11 },
+      { texto: '1. Urrezko Iturrirantz jarraitu', destino: 12 },
       { texto: '2. Zubi berrira joan', destino: 5 },
       { texto: '3. Liburutegira joan', destino: 4 },
     ],
