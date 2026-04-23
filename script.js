@@ -364,6 +364,7 @@ let DOM = {
   screenTransition: document.getElementById('screen-transition'),
   screenBook:       document.getElementById('screen-book'),
   screenEnd:        document.getElementById('screen-end'),
+  screenLoader:     document.getElementById('screen-loader'),
 
   btnStart:         document.getElementById('btn-start'),
   btnContinue:      document.getElementById('btn-continue'),
@@ -416,7 +417,7 @@ let DOM = {
 
 function mostrarPantalla(screen) {
   // Ocultar todas
-  [DOM.screenIntro, DOM.screenTransition, DOM.screenBook, DOM.screenEnd]
+  [DOM.screenIntro, DOM.screenTransition, DOM.screenBook, DOM.screenEnd, DOM.screenLoader]
     .forEach(s => {
       s.classList.remove('active');
       s.style.display = 'none';
@@ -1013,12 +1014,140 @@ function enableVideoSound() {
 }
 
 // Activar sonido del video con el primer clic del usuario
-document.addEventListener('click', enableVideoSound, { once: true });
+// (ya no se necesita: el loader se encarga de desbloquear audio/video)
+// document.addEventListener('click', enableVideoSound, { once: true });
+
+
+/* ══════════════════════════════════════════
+   15b. PANTALLA DE CARGA
+   ══════════════════════════════════════════ */
+
+/**
+ * Muestra una barra de progreso fake (~3 s) y espera a que el usuario
+ * pulse una tecla o toque la pantalla para desbloquear audio/video
+ * y pasar a la intro.
+ */
+function iniciarLoader() {
+  const barFill      = document.getElementById('loader-bar-fill');
+  const barPercent   = document.getElementById('loader-percent');
+  const pressMsg     = document.getElementById('loader-press');
+  const loaderCanvas = document.getElementById('loader-starfield');
+
+  // ── Starfield en el canvas del loader ──
+  (function starfieldLoader() {
+    if (!loaderCanvas) return;
+    const ctx = loaderCanvas.getContext('2d');
+    function resize() {
+      loaderCanvas.width  = loaderCanvas.offsetWidth;
+      loaderCanvas.height = loaderCanvas.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    const stars = Array.from({ length: 100 }, () => ({
+      x: Math.random() * loaderCanvas.width,
+      y: Math.random() * loaderCanvas.height,
+      size: Math.random() < 0.1 ? 2 : 1,
+      speed: Math.random() * 0.3 + 0.05,
+      blink: Math.random() * Math.PI * 2,
+    }));
+    function draw() {
+      if (DOM.screenLoader.style.display === 'none') return;
+      ctx.clearRect(0, 0, loaderCanvas.width, loaderCanvas.height);
+      const t = Date.now() / 1000;
+      stars.forEach(s => {
+        const alpha = 0.4 + 0.6 * (0.5 + 0.5 * Math.sin(t * 1.5 + s.blink));
+        ctx.fillStyle = `rgba(0,255,136,${alpha * 0.7})`;
+        ctx.fillRect(Math.round(s.x), Math.round(s.y), s.size, s.size);
+        s.y += s.speed;
+        if (s.y > loaderCanvas.height) { s.y = 0; s.x = Math.random() * loaderCanvas.width; }
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  // ── Barra de progreso fake (pasos irregulares, ~3 s en total) ──
+  let progreso     = 0;
+  let listo        = false;  // barra ha llegado al 100%
+  let interactuado = false;  // usuario ya pulsó/tocó
+
+  const pasos = [
+    { hasta: 15,  ms: 200 },
+    { hasta: 38,  ms: 100 },
+    { hasta: 52,  ms: 240 },
+    { hasta: 71,  ms: 80  },
+    { hasta: 84,  ms: 160 },
+    { hasta: 93,  ms: 210 },
+    { hasta: 99,  ms: 320 },
+    { hasta: 100, ms: 440 },
+  ];
+
+  function animarBarra() {
+    let i = 0;
+    function siguientePaso() {
+      if (i >= pasos.length) {
+        barFill.style.width    = '100%';
+        barPercent.textContent = '100%';
+        listo = true;
+        mostrarMensajePulsa();
+        return;
+      }
+      const { hasta, ms } = pasos[i++];
+      const desde = progreso;
+      const inicio = performance.now();
+      function animar(now) {
+        const t = Math.min((now - inicio) / ms, 1);
+        progreso = desde + (hasta - desde) * t;
+        barFill.style.width    = progreso.toFixed(1) + '%';
+        barPercent.textContent = Math.floor(progreso) + '%';
+        if (t < 1) {
+          requestAnimationFrame(animar);
+        } else {
+          progreso = hasta;
+          setTimeout(siguientePaso, 30);
+        }
+      }
+      requestAnimationFrame(animar);
+    }
+    siguientePaso();
+  }
+
+  function mostrarMensajePulsa() {
+    pressMsg.innerHTML = 'SAKATU EDOZEIN TEKLA<br>EDO UKITU PANTAILA';
+    if (interactuado) pasarAIntro(); // ya interactuó mientras cargaba
+  }
+
+  function pasarAIntro() {
+    // Desbloquear audio y video (política de autoplay del navegador)
+    const bgMusic    = document.getElementById('background-music');
+    const introVideo = document.getElementById('intro-video');
+    if (bgMusic)     { bgMusic.volume = 0.3;    bgMusic.play().catch(() => {}); }
+    if (introVideo)  { introVideo.muted = false; introVideo.play().catch(() => {}); }
+
+    mostrarPantalla(DOM.screenIntro);
+  }
+
+  // ── Esperar interacción del usuario ──
+  function onInteraccion() {
+    interactuado = true;
+    if (listo) pasarAIntro(); // barra ya terminó → transición inmediata
+    // Si no, pasarAIntro() se llamará desde mostrarMensajePulsa()
+  }
+  document.addEventListener('keydown',     onInteraccion, { once: true });
+  document.addEventListener('pointerdown', onInteraccion, { once: true });
+
+  animarBarra();
+}
+
+
+/* ══════════════════════════════════════════
+   15. INICIALIZACIÓN
+   ══════════════════════════════════════════ */
 
 (function init() {
-  // Iniciar starfield
+  // Starfield de la intro (se activa cuando el loader cede paso)
   iniciarStarfield();
-  
+
   // Construir lista de capítulos en el menú lateral (una sola vez)
   construirMenuCapitulos();
 
@@ -1028,6 +1157,8 @@ document.addEventListener('click', enableVideoSound, { once: true });
     DOM.savedNotice.classList.remove('hidden');
   }
 
-  // Mostrar pantalla intro
-  mostrarPantalla(DOM.screenIntro);
+  // Arrancar con el loader (desbloquea audio/video y luego muestra la intro)
+  mostrarPantalla(DOM.screenLoader);
+  iniciarLoader();
 })();
+

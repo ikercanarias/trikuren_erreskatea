@@ -1409,3 +1409,150 @@ html, body {
   }
 }
 
+/* ══════════════════════════════════════════
+   PANTALLA DE CARGA (LOADER)
+   ══════════════════════════════════════════ */
+
+#screen-loader {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+  height: 100%;
+  align-items: center;
+}
+
+/* Reutiliza el mismo canvas de estrellas que la intro */
+#loader-starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Scanlines CRT sobre todo el loader */
+#screen-loader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0,0,0,0.18) 2px,
+    rgba(0,0,0,0.18) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Logo / título */
+.loader-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loader-sub {
+  font-size: 7px;
+  color: var(--color-amber);
+  letter-spacing: 4px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.loader-title {
+  font-size: clamp(26px, 5.5vw, 48px);
+  color: var(--color-green);
+  text-shadow: var(--shadow-glow);
+  line-height: 1.35;
+  letter-spacing: 6px;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+/* Barra de progreso */
+.loader-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: min(400px, 80vw);
+}
+
+.loader-bar-track {
+  width: 100%;
+  height: 14px;
+  border: 2px solid var(--color-green-dim);
+  background: rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reflejo interior CRT */
+.loader-bar-track::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 6px,
+    rgba(0,255,136,0.06) 6px,
+    rgba(0,255,136,0.06) 7px
+  );
+  pointer-events: none;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-green);
+  box-shadow: 0 0 10px var(--color-green), 0 0 20px rgba(0,255,136,0.4);
+  transition: width 0.12s linear;
+  position: relative;
+}
+
+/* Destello en el extremo de la barra */
+.loader-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: #fff;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+.loader-percent {
+  font-size: 8px;
+  color: var(--color-green-dim);
+  letter-spacing: 2px;
+  font-family: var(--font-pixel);
+}
+
+/* Mensaje "pulsa cualquier tecla" */
+.loader-press {
+  font-size: 9px;
+  color: var(--color-green);
+  letter-spacing: 3px;
+  line-height: 1.9;
+  min-height: 2.5em;        /* reserva espacio aunque esté vacío */
+  animation: blink 1.1s step-end infinite;
+  text-shadow: var(--shadow-glow);
+}
+
+
