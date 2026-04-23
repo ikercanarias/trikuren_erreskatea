@@ -747,6 +747,11 @@ function mostrarFinal() {
    ══════════════════════════════════════════ */
 
 function iniciarJuego(desdePagina = 1) {
+  const introVideo = document.getElementById('intro-video');
+  if (introVideo) {
+    introVideo.pause();  // ← NUEVA LÍNEA
+  }
+  
   mostrarPantalla(DOM.screenTransition);
 
   // Animación de apertura del libro (800ms)
@@ -945,6 +950,10 @@ DOM.chapterBackdrop.addEventListener('click', cerrarMenuCapitulos);
 DOM.btnRestart.addEventListener('click', () => {
   if (confirm('Hasieratik hasi nahi duzu abentura?')) {
     Estado.borrar();
+	const introVideo = document.getElementById('intro-video');
+    if (introVideo) {
+      introVideo.play().catch(() => {});  // ← NUEVA LÍNEA
+    }
     mostrarPantalla(DOM.screenIntro);
   }
 });
@@ -952,6 +961,10 @@ DOM.btnRestart.addEventListener('click', () => {
 // Botón "Jugar de nuevo" (pantalla final)
 DOM.btnPlayAgain.addEventListener('click', () => {
   Estado.borrar();
+  const introVideo = document.getElementById('intro-video');
+  if (introVideo) {
+    introVideo.play().catch(() => {});  // ← NUEVA LÍNEA
+  }
   mostrarPantalla(DOM.screenIntro);
 });
 
