@@ -986,6 +986,57 @@ html, body {
 }
 
 /* ══════════════════════════════════════════
+   LANDSCAPE MODE (móviles en horizontal)
+   ══════════════════════════════════════════ */
+@media (max-height: 600px) and (orientation: landscape) {
+  .title-box {
+    padding: 12px 20px;
+    border: 2px solid var(--color-green);
+  }
+
+  .title-sub {
+    font-size: 6px;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+  }
+
+  .game-title {
+    font-size: clamp(14px, 4vw, 28px);
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+
+  .title-tagline {
+    font-size: 6px;
+    margin-top: 6px;
+  }
+
+  .title-img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .intro-content {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .crt-decoration {
+    font-size: 6px;
+  }
+
+  .intro-footer {
+    gap: 12px;
+    font-size: 6px;
+  }
+
+  .btn-start {
+    font-size: 9px;
+    padding: 8px 20px;
+  }
+}
+
+/* ══════════════════════════════════════════
    IMÁGENES SVG PIXEL ART (generadas en JS)
    Los estilos de las SVGs inline
    ══════════════════════════════════════════ */
