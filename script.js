@@ -52,7 +52,7 @@ const PAGINAS = [
     texto: `Bartolin Basteitara iritsi zenean, zelaia isilik zegoen. Zelaiko tabernan galdetu zuen ea norbaitek zerbait arraroa ikusi zuen, baina inork ez zuen ezer ikusi. Harmailetan begiratu zuen eta ez zuen ezer aurkitu. Aldagelak arakatu zituen eta ez zuen arrastorik aurkitu. Baina bat-batean, zerbaitek atentzioa eman zion berdegunean. Bartolinen ama zelai erdian zegoen baloi baten ondoan.\n\nBartolin! Bartolin! – oihukatu zuen amak. Eskerrak iritsi zaren. Basteitan paseatzen ari nintzen eta futbol zelaiaren erdian baloi bat zegoela ikusi dut. Eta harrapatzera hurbildu naizenean, ohar bat zegoen baloiaren azpian.`,
     lore: `...`,
     desafio: {
-      galdera: `Futbol zelai batean, <b>bi futbol zazpi</b> partida aldi berean jokatzen ari dira. Zenbat pertsona daude zelaian?`,
+      galdera: `Futbol zelai batean, bi futbol zazpi partida aldi berean jokatzen ari dira. Zenbat pertsona daude zelaian?`,
       erantzuna: '30',
       okerMezua: `Hori ez da... Saiatu berriro. Pista: Zelaiaren barruan jokalariak eta beste norbait daude.`,
     },
@@ -74,9 +74,9 @@ const PAGINAS = [
     texto: `Egun hartan Udaletxeko plaza bare zegoen. Bartolin arrastoen bila hasi zen. Arake tabernan galdetu zuen, baina Danik esan zion ez zuela ezer arrarorik ikusi. Gero, Posta Bulegoko langileak galdekatu zituen, baina ez zekiten ezer.\n\nUdaletxe atzetik zetorren soinu gogor bat entzun zuen. Plaza garbitzera zetorren eskobatzeko makina zen. Andonik ekortzeko makina gidatzen zuen. Bartolinek galdetu zion ea haur talde bat ikusi zuen handik korrika, baina ez zuen ezer ikusi.\n\nAzkenean, jarlekuak eta jardinerak aztertu ondoren, harrizko iturri txikira hurbildu eta kutxa itxi bat ikusi zuen.`,
     lore: `...`,
     desafio: {
-      galdera: `Kutxak 3 zenbakiko kodea eta ohar bat zituen, pista hauekin:<br>5-9-4 Bi zenbaki zuzenak dira, baina okerreko posizioan daude.<br>1-7-4 Bi zenbaki zuzenak dira eta <b>BAT</b> posizio egokian dago.<br>6-9-1 Zenbakirik ez da zuzena.`,
-      erantzuna: '4-7-5',
-      okerMezua: `Hori ez da... Saiatu berriro. Gogoratu: idatzi zenbakiak "-"-rekin bereizita.`,
+      galdera: `Kutxak 3 zenbakiko kodea eta ohar bat zituen, pista hauekin:<br>6-8-2: Zenbaki bat zuzena da eta posizio egokian dago.<br>6-1-4: Zenbaki bat zuzena da, baina posizio okerrean dago.<br>2-0-6: Bi zenbaki dira zuzenak, baina biak daude posizio okerrean.<br>7-3-8: Ezer ez da zuzena. Zenbaki horietako bat ere ez da kodearen parte.<br>8-7-0: Zenbaki bat zuzena da, baina posizio okerrean dago.`,
+      erantzuna: '0-4-2',
+      okerMezua: `Hori ez da... Saiatu berriro.\nPista: 4. pistako zenbakiak baztertuz hasten da.`,
     },	
 	escena: 'ayuntamiento',
     opciones: [
@@ -93,10 +93,10 @@ const PAGINAS = [
     id: 4,
     capitulo: 'IV. KAPITULUA - LIBURUTEGIA',
     titulo: 'LIBURUTEGIA',
-    texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Txandalez jantzita zeuden, "E" letradun ezkutu batekin. Bartolinek liburua ireki zuenean, barruan mezu bat zegoela ikusi zuen.\n"Denok ezagutzen dugu Udaletxeko plaza, baina ezagutzen al duzue plaza horren benetako izena?"`,
+    texto: `Dena isilik dago... isiltasun gehiegi, baita liburutegi baterako ere. Eguna oso arraroa izaten ari da. Bartolin liburutegian sartu zenean, Arrate bere mahaian lanean baino ez zuen ikusi. Harrigarria bada ere, Arratek bazuen liburu bat berarentzat prestatua:\n\n- Arrate: Lehen orduan nik ezagutzen ez nuen haur talde bat etorri da eta liburu hau utzi didate. Interesgarria irudituko litzaizukeela esan dute:\n\n- Bartolin: Eskerrik asko Arrate. Baina nor lirateke ume misteriotsu horiek?\n\n- Arrate: Ez dakit, ez ziren herrikoak. Txandalez jantzita zeuden, "E" letradun ezkutu batekin. Bartolinek liburua ireki zuenean, barruan mezu bat zegoela ikusi zuen.`,
     lore: `...`,
     desafio: {
-      galdera: `Denok ezagutzen dugu Udaletxeko plaza, baina ezagutzen al duzue plaza horren <b>benetako izena?</b>.`,
+      galdera: `Denok ezagutzen dugu Udaletxeko plaza, baina ezagutzen al duzue plaza horren benetako izena?.`,
       erantzuna: 'Doctor Madinabeitia',
       okerMezua: `Hori ez da... Saiatu berriro. Google Maps-en bila dezakezue.`,
     },
@@ -1002,6 +1002,18 @@ function initMusic() {
 // Activar música con el primer clic del usuario
 document.addEventListener('click', initMusic, { once: true });
 
+
+// Función para activar sonido del video
+function enableVideoSound() {
+  const introVideo = document.getElementById('intro-video');
+  if (!introVideo) return;
+  
+  introVideo.muted = false;  // Quitar el silencio
+  introVideo.play().catch(err => console.log('Ezin izan da bideoa erreproduzitu:', err));
+}
+
+// Activar sonido del video con el primer clic del usuario
+document.addEventListener('click', enableVideoSound, { once: true });
 
 (function init() {
   // Iniciar starfield
