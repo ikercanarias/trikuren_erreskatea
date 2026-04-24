@@ -1043,7 +1043,7 @@ function enableVideoSound() {
 function iniciarLoader() {
   const barFill      = document.getElementById('loader-bar-fill');
   const barPercent   = document.getElementById('loader-percent');
-  const pressMsg     = document.getElementById('loader-press');
+  const btnPress     = document.getElementById('loader-press');
   const loaderCanvas = document.getElementById('loader-starfield');
 
   // ── Starfield en el canvas del loader ──
@@ -1081,8 +1081,6 @@ function iniciarLoader() {
 
   // ── Barra de progreso fake (pasos irregulares, ~3 s en total) ──
   let progreso     = 0;
-  let listo        = false;  // barra ha llegado al 100%
-  let interactuado = false;  // usuario ya pulsó/tocó
 
   const pasos = [
     { hasta: 15,  ms: 200 },
@@ -1101,8 +1099,7 @@ function iniciarLoader() {
       if (i >= pasos.length) {
         barFill.style.width    = '100%';
         barPercent.textContent = '100%';
-        listo = true;
-        mostrarMensajePulsa();
+        mostrarBoton();
         return;
       }
       const { hasta, ms } = pasos[i++];
@@ -1125,29 +1122,25 @@ function iniciarLoader() {
     siguientePaso();
   }
 
-  function mostrarMensajePulsa() {
-    pressMsg.innerHTML = 'SAKATU EDOZEIN TEKLA<br>EDO UKITU PANTAILA';
-    if (interactuado) pasarAIntro(); // ya interactuó mientras cargaba
-  }
+  // Muestra el botón y le conecta el click — todo en el mismo hilo de usuario
+  function mostrarBoton() {
+    btnPress.classList.remove('hidden');
+    btnPress.focus(); // accesibilidad: foco para teclado
 
-  function pasarAIntro() {
-    // Desbloquear audio y video (política de autoplay del navegador)
-    const bgMusic    = document.getElementById('background-music');
-    const introVideo = document.getElementById('intro-video');
-    if (bgMusic)     { bgMusic.volume = 0.3;    bgMusic.play().catch(() => {}); }
-    if (introVideo)  { introVideo.muted = false; introVideo.play().catch(() => {}); }
+    btnPress.addEventListener('click', function onBtnClick() {
+      btnPress.removeEventListener('click', onBtnClick);
 
-    mostrarPantalla(DOM.screenIntro);
-  }
+      // ── play() llamado DIRECTAMENTE dentro del handler del botón ──
+      // Esto es lo que los navegadores móviles requieren para desbloquear
+      // la reproducción de audio y video sin restricciones de autoplay.
+      const bgMusic    = document.getElementById('background-music');
+      const introVideo = document.getElementById('intro-video');
+      if (bgMusic)    { bgMusic.volume = 0.3;    bgMusic.play().catch(() => {}); }
+      if (introVideo) { introVideo.muted = false; introVideo.play().catch(() => {}); }
 
-  // ── Esperar interacción del usuario ──
-  function onInteraccion() {
-    interactuado = true;
-    if (listo) pasarAIntro(); // barra ya terminó → transición inmediata
-    // Si no, pasarAIntro() se llamará desde mostrarMensajePulsa()
+      mostrarPantalla(DOM.screenIntro);
+    });
   }
-  document.addEventListener('keydown',     onInteraccion, { once: true });
-  document.addEventListener('pointerdown', onInteraccion, { once: true });
 
   animarBarra();
 }

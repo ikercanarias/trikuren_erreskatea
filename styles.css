@@ -1546,13 +1546,42 @@ html, body {
 
 /* Mensaje "pulsa cualquier tecla" */
 .loader-press {
-  font-size: 9px;
+  /* Reset de botón para que parezca texto */
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid var(--color-green);
+  cursor: pointer;
+  /* Tipografía idéntica al resto del juego */
+  font-family: var(--font-pixel);
+  font-size: 11px;
   color: var(--color-green);
   letter-spacing: 3px;
   line-height: 1.9;
-  min-height: 2.5em;        /* reserva espacio aunque esté vacío */
-  animation: blink 1.1s step-end infinite;
+  padding: 14px 28px;
+  /* Glow y parpadeo */
+  box-shadow: var(--shadow-glow), 4px 4px 0 var(--color-green-dim);
   text-shadow: var(--shadow-glow);
+  animation: btnPulse 1.6s ease-in-out infinite;
+  /* Reserva espacio antes de aparecer */
+  min-height: 2.5em;
+  transition: background 0.1s, transform 0.1s;
 }
+
+.loader-press:hover {
+  background: rgba(0, 255, 136, 0.12);
+}
+
+.loader-press:active {
+  transform: translateY(3px);
+  box-shadow: 1px 1px 0 var(--color-green-dim);
+}
+
+.loader-press.hidden {
+  visibility: hidden;   /* oculto pero reserva el espacio */
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 
