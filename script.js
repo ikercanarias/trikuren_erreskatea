@@ -74,7 +74,7 @@ const PAGINAS = [
     texto: `Egun hartan Udaletxeko plaza bare zegoen. Bartolin arrastoen bila hasi zen. Arake tabernan galdetu zuen, baina Danik esan zion ez zuela ezer arrarorik ikusi. Gero, Posta Bulegoko langileak galdekatu zituen, baina ez zekiten ezer.\n\nUdaletxe atzetik zetorren soinu gogor bat entzun zuen. Plaza garbitzera zetorren eskobatzeko makina zen. Andonik ekortzeko makina gidatzen zuen. Bartolinek galdetu zion ea haur talde bat ikusi zuen handik korrika, baina ez zuen ezer ikusi.\n\nAzkenean, jarlekuak eta jardinerak aztertu ondoren, harrizko iturri txikira hurbildu eta kutxa itxi bat ikusi zuen.`,
     lore: `...`,
     desafio: {
-      galdera: `Kutxak 3 zenbakiko kodea eta ohar bat zituen, pista hauekin:<br>5-9-4 Bi zenbaki zuzenak dira, baina okerreko posizioan daude.<br>1-7-4 Bi zenbaki zuzenak dira eta beren posizio egokian daude.<br>6-9-1 Zenbakirik ez da zuzena.`,
+      galdera: `Kutxak 3 zenbakiko kodea eta ohar bat zituen, pista hauekin:<br>5-9-4 Bi zenbaki zuzenak dira, baina okerreko posizioan daude.<br>1-7-4 Bi zenbaki zuzenak dira, baina bakarra dago posizio egokian.<br>6-9-1 Zenbakirik ez da zuzena.`,
       erantzuna: '4-7-5',
       okerMezua: `Hori ez da... Saiatu berriro. Gogoratu: idatzi zenbakiak "-"-rekin bereizita.`,
     },	
